@@ -11,7 +11,10 @@ const mainnav = document.querySelector('.navigation')
 const hambutton = document.querySelector('#menu')
 
 
-
+hambutton.addEventListener('click', () => {
+    mainnav.classList.toggle('show');
+    hambutton.classList.toggle('show');
+});
 
 
 const courses = [
@@ -25,7 +28,7 @@ const courses = [
         technology: [
             'Python'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'WDD',
@@ -38,7 +41,7 @@ const courses = [
             'HTML',
             'CSS'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'CSE',
@@ -50,7 +53,7 @@ const courses = [
         technology: [
             'Python'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'CSE',
@@ -76,7 +79,7 @@ const courses = [
             'CSS',
             'JavaScript'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'WDD',
@@ -93,3 +96,46 @@ const courses = [
         completed: false
     }
 ]
+
+createCourseCard(courses);
+
+const allLink = document.querySelector("#all");
+const cseLink = document.querySelector("#cse");
+const wddLink = document.querySelector("#wdd");
+
+allLink.addEventListener("click", () => {
+    createCourseCard(courses)
+});
+
+cseLink.addEventListener("click", () => {
+    createCourseCard(courses.filter(course => course.subject == "CSE"));
+});
+
+wddLink.addEventListener("click", () => {
+    createCourseCard(courses.filter(course => course.subject == "WDD"));
+});
+function createCourseCard(filteredCourses) {
+    document.querySelector(".container").innerHTML = "";
+    filteredCourses.forEach(course => {
+        let card = document.createElement("section");
+        let subject = document.createElement("p")
+        let number = document.createElement("p")
+        let completed = document.createElement("p")
+
+        subject.textContent = course.subject;
+        number.textContent = course.number;
+        completed.textContent = course.completed;
+        subject.setAttribute("style", "background-color: blue");
+
+        card.appendChild(subject);
+        card.appendChild(number);
+        if (completed = false) {
+            subject.style.backgroundColor = "red";
+        }
+
+
+        document.querySelector(".container").appendChild(card);
+    });
+}
+
+

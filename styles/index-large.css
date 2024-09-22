@@ -1,4 +1,4 @@
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 750px) {
     body {
         margin: 0px;
     }
@@ -10,6 +10,52 @@
         background-color: rgb(59, 59, 235);
         padding: 20px;
         margin: 0px;
+        border-radius: 0px;
+
+    }
+
+    img {
+        display: grid;
+        justify-content: center;
+    }
+
+    section {
+        padding: 20px;
+
+        border-style: solid 1px;
+        box-shadow: 0px 4px 8px 0 blue;
+        border-radius: 25px;
+
+
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .navigation li {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+
+    h2,
+    h3,
+    h4 {
+        font-size: 50px;
+        background-color: black;
+        color: white;
+        margin: 0px;
+        padding: 20px;
+        text-align: center;
+
+    }
+
+    .top-section {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+
 
     }
 
@@ -23,6 +69,7 @@
         font-size: 25px;
         font-weight: bold;
         background-color: rgb(59, 59, 235);
+        border-radius: 0px;
 
     }
 
