@@ -1,0 +1,72 @@
+@media screen and (min-width: 601px) {
+    body {
+        margin: 0px;
+    }
+
+    .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(59, 59, 235);
+        padding: 20px;
+        margin: 0px;
+
+    }
+
+    .title img {
+        vertical-align: auto;
+    }
+
+    footer {
+        text-align: center;
+        padding: 5px;
+        font-size: 25px;
+        font-weight: bold;
+        background-color: rgb(59, 59, 235);
+
+    }
+
+
+    h1 {
+        vertical-align: middle;
+        font-size: 100px;
+        padding-right: 50px;
+    }
+
+    nav {
+        background-color: black;
+        margin: 0 auto;
+        max-width: 100%;
+        margin: 0px;
+    }
+
+    nav ul {
+        list-style-type: none;
+        justify-content: space-around;
+
+    }
+
+    nav a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        text-decoration: none;
+        max-width: 1000px;
+        font-size: 50px;
+    }
+
+    nav ul {
+        display: flex;
+        margin: 0px
+    }
+
+    nav a:hover {
+        border: 1px solid #fff;
+        background-color: blue;
+    }
+
+    .active {
+        color: green;
+    }
+}
