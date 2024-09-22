@@ -120,17 +120,17 @@ function createCourseCard(filteredCourses) {
         let card = document.createElement("section");
         let subject = document.createElement("p")
         let number = document.createElement("p")
-        let completed = document.createElement("p")
+        let completed =
 
-        subject.textContent = course.subject;
+            subject.textContent = course.subject;
         number.textContent = course.number;
-        completed.textContent = course.completed;
+        completed = course.completed;
         subject.setAttribute("style", "background-color: blue");
 
         card.appendChild(subject);
         card.appendChild(number);
-        if (completed = false) {
-            subject.style.backgroundColor = "red";
+        if (completed == false) {
+            card.style.backgroundColor = "red";
         }
 
 
