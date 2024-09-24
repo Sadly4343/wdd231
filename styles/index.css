@@ -4,9 +4,14 @@ ul.filter {
     justify-content: space-around;
 }
 
+body {
+    color: white;
+    background-color: rgb(59, 59, 235);
+}
+
 .filter li {
     list-style: none;
-    background-color: black;
+    background-color: rgb(59, 59, 235);
     width: 150px;
     border-radius: 25px;
     font-size: 25px;
@@ -14,7 +19,7 @@ ul.filter {
 
 .filter li a {
     text-decoration: none;
-    background-color: black;
+    background-color: rgb(59, 59, 235);
     color: white;
     width: 150px
 }
@@ -162,6 +167,7 @@ main {
     grid-template-columns: 1fr;
     width: 100%;
     height: auto;
+    background-color: black;
 }
 
 section {

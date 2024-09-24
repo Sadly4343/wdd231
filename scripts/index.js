@@ -103,6 +103,7 @@ const allLink = document.querySelector("#all");
 const cseLink = document.querySelector("#cse");
 const wddLink = document.querySelector("#wdd");
 
+
 allLink.addEventListener("click", () => {
     createCourseCard(courses)
 });
@@ -115,27 +116,39 @@ wddLink.addEventListener("click", () => {
     createCourseCard(courses.filter(course => course.subject == "WDD"));
 });
 function createCourseCard(filteredCourses) {
+    let courseCredits = [];
     document.querySelector(".container").innerHTML = "";
     filteredCourses.forEach(course => {
         let card = document.createElement("section");
         let subject = document.createElement("p")
         let number = document.createElement("p")
-        let completed =
 
-            subject.textContent = course.subject;
+        subject.textContent = course.subject;
         number.textContent = course.number;
         completed = course.completed;
+        credits = course.credits
         subject.setAttribute("style", "background-color: blue");
 
         card.appendChild(subject);
         card.appendChild(number);
-        if (completed == false) {
-            card.style.backgroundColor = "red";
+        if (completed == true) {
+            card.style.backgroundColor = "rgb(59, 59, 235)";
+            courseCredits.push(credits);
+
         }
+
 
 
         document.querySelector(".container").appendChild(card);
     });
+    const initialValue = 0;
+    const sumWithInitial = courseCredits.reduce(
+        (accumulator, currentValue) => accumulator + currentValue,
+        initialValue,);
+    document.getElementById("total").innerHTML = sumWithInitial;
+
+
+
 }
 
 
