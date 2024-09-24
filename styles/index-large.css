@@ -22,7 +22,7 @@
     section {
         padding: 20px;
 
-        border-style: solid 1px;
+        border-style: solid;
         box-shadow: 0px 4px 8px 0 blue;
         border-radius: 25px;
 
@@ -57,10 +57,6 @@
         grid-template-columns: 1fr 2fr;
 
 
-    }
-
-    .title img {
-        vertical-align: auto;
     }
 
     footer {
