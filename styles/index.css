@@ -1,6 +1,28 @@
-.filter {
+ul.filter {
     display: flex;
     text-align: center;
+    justify-content: space-around;
+}
+
+.filter li {
+    list-style: none;
+    background-color: black;
+    width: 150px;
+    border-radius: 25px;
+    font-size: 25px;
+}
+
+.filter li a {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    width: 150px
+}
+
+.filter li a:hover {
+    text-decoration: none;
+    color: red;
+
 }
 
 .container section {
