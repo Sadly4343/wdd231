@@ -17,6 +17,11 @@ body {
     font-size: 25px;
 }
 
+a.active {
+    background-color: green;
+
+}
+
 .filter li a {
     text-decoration: none;
     background-color: rgb(59, 59, 235);
@@ -29,6 +34,7 @@ body {
     color: red;
 
 }
+
 
 .container section {
     display: flex;
@@ -76,6 +82,12 @@ section img {
     border-radius: 25px;
     width: 500px;
     height: auto;
+}
+
+section p {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bolder;
 }
 
 header {

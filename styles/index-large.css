@@ -109,7 +109,9 @@
         background-color: blue;
     }
 
-    .active {
-        color: green;
+    a.active {
+        background-color: green;
+
     }
+
 }
