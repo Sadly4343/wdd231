@@ -22,6 +22,24 @@ h1 {
 
 }
 
+.social-media {
+    display: flex;
+
+}
+
+.social-media p {
+    padding: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 80%;
+    background-color: grey;
+    padding: 20px;
+}
+
 .hero img {
     width: auto;
     height: 80%;
@@ -33,26 +51,30 @@ h1 {
 .middle-section {
     display: grid;
 
-    align-items: center;
+    align-items: stretch;
     width: 80%;
     margin: 0 auto;
     grid-template-columns: 3fr 2fr 2fr;
     grid-gap: 20px;
+    margin-bottom: 20px;
 
 
 }
 
 section {
     background-color: grey;
+    padding: 20px;
 }
 
 h3,
 h4,
-h5 {
+h5,
+h6 {
     font-size: 25px;
     background-color: red;
     margin-top: 0px;
     padding: 5px;
+    margin-bottom: 0px;
 }
 
 h2 {
