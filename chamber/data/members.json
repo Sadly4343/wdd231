@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Tech Innovators Inc.",
+        "address": "1234 Innovation Drive, Tech City, TC 56789",
+        "phone": "(123) 456-7890",
+        "website": "https://www.techinnovators.com",
+        "image": "",
+        "membership": ""
+    },
+    {
+        "name": "Green Solutions LLC",
+        "address": "5678 Eco Lane, Green Town, GT 12345",
+        "phone": "(234) 567-8901",
+        "website": "https://www.greensolutions.com",
+        "image": "",
+        "membership": ""
+    },
+    {
+        "name": "Health First Corp.",
+        "address": "9101 Wellness Blvd, Health City, HC 67890",
+        "phone": "(345) 678-9012",
+        "website": "https://www.healthfirst.com",
+        "image": "",
+        "membership": ""
+    },
+    {
+        "name": "EduTech Enterprises",
+        "address": "1122 Learning Ave, Edu City, EC 23456",
+        "phone": "(456) 789-0123",
+        "website": "https://www.edutech.com",
+        "image": "",
+        "membership": ""
+    },
+    {
+        "name": "Finance Pros Ltd.",
+        "address": "3344 Money Street, Finance Town, FT 34567",
+        "phone": "(567) 890-1234",
+        "website": "https://www.financepros.com",
+        "image": "",
+        "membership": ""
+    },
+    {
+        "name": "Creative Minds Studio",
+        "address": "5566 Art Blvd, Creative City, CC 45678",
+        "phone": "(678) 901-2345",
+        "website": "https://www.creativeminds.com",
+        "image": "",
+        "membership": ""
+    },
+    {
+        "name": "Travel Experts Co.",
+        "address": "7788 Adventure Road, Travel Town, TT 56789",
+        "phone": "(789) 012-3456",
+        "website": "https://www.travelexperts.com",
+        "image": "",
+        "membership": ""
+    }
+]
