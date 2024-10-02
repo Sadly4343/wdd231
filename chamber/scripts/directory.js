@@ -36,7 +36,7 @@ const displayCompanies = (companies) => {
         let image = document.createElement('img');
 
         // Build the h2 content out to show the prophet's full name
-        fullName.textContent = `${companie.name} totally`; // fill in the blank
+        fullName.textContent = companie.name; // fill in the blank
         // Build the image images by setting all the relevant attributes
         console.log(`Image URL: ${companie.image}`);
         image.setAttribute('src', companie.image);
