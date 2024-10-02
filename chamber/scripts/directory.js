@@ -34,11 +34,16 @@ const displayCompanies = (companies) => {
         let card = document.createElement('section');
         let fullName = document.createElement('h8'); // fill in the blank
         let image = document.createElement('img');
+        let address = document.createElement('p');
+        let phone = document.createElement('p');
+        let website = document.createElement('a');
 
-        // Build the h2 content out to show the prophet's full name
-        fullName.textContent = companie.name; // fill in the blank
-        // Build the image images by setting all the relevant attributes
-        console.log(`Image URL: ${companie.image}`);
+
+        fullName.textContent = companie.name;
+        address.textContent = companie.address;
+        phone.textContent = companie.phone;
+        website.textContent = companie.website;
+        website.setAttribute('href', companie.website)
         image.setAttribute('src', companie.image);
         image.setAttribute('alt', `images of ${companie.name} totally`); // fill in the blank
         image.setAttribute('loading', 'lazy');
@@ -48,6 +53,9 @@ const displayCompanies = (companies) => {
         // Append the section(card) with the created elements
         card.appendChild(fullName); //fill in the blank
         card.appendChild(image);
+        card.appendChild(address);
+        card.appendChild(phone);
+        card.appendChild(website);
 
         cards.appendChild(card);
     }); // end of arrow function and forEach loop

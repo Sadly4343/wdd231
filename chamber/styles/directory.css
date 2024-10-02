@@ -1,3 +1,9 @@
-.current-weather p ::before {
-    content: "☁️";
+.current-weather p {
+    display: flex;
+    justify-content: center;
+}
+
+#cards section {
+    background-color: #78FF94;
+    ;
 }
