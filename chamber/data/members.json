@@ -13,7 +13,7 @@
             "address": "5678 Eco Lane, Green Town, GT 12345",
             "phone": "(234) 567-8901",
             "website": "https://www.greensolutions.com",
-            "image": "",
+            "image": "images/green.svg",
             "membership": ""
         },
         {
@@ -21,7 +21,7 @@
             "address": "9101 Wellness Blvd, Health City, HC 67890",
             "phone": "(345) 678-9012",
             "website": "https://www.healthfirst.com",
-            "image": "",
+            "image": "images/health.svg",
             "membership": ""
         },
         {
@@ -29,7 +29,7 @@
             "address": "1122 Learning Ave, Edu City, EC 23456",
             "phone": "(456) 789-0123",
             "website": "https://www.edutech.com",
-            "image": "",
+            "image": "images/education.svg",
             "membership": ""
         },
         {
@@ -37,7 +37,7 @@
             "address": "3344 Money Street, Finance Town, FT 34567",
             "phone": "(567) 890-1234",
             "website": "https://www.financepros.com",
-            "image": "",
+            "image": "images/finance.svg",
             "membership": ""
         },
         {
@@ -45,7 +45,7 @@
             "address": "5566 Art Blvd, Creative City, CC 45678",
             "phone": "(678) 901-2345",
             "website": "https://www.creativeminds.com",
-            "image": "",
+            "image": "images/creative.svg",
             "membership": ""
         },
         {
@@ -53,7 +53,7 @@
             "address": "7788 Adventure Road, Travel Town, TT 56789",
             "phone": "(789) 012-3456",
             "website": "https://www.travelexperts.com",
-            "image": "",
+            "image": "images/travel.svg",
             "membership": ""
         }
     ]

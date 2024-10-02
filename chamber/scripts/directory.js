@@ -42,8 +42,8 @@ const displayCompanies = (companies) => {
         image.setAttribute('src', companie.image);
         image.setAttribute('alt', `images of ${companie.name} totally`); // fill in the blank
         image.setAttribute('loading', 'lazy');
-        image.setAttribute('width', '340');
-        image.setAttribute('height', '440');
+        image.setAttribute('width', '48');
+        image.setAttribute('height', '48');
 
         // Append the section(card) with the created elements
         card.appendChild(fullName); //fill in the blank
