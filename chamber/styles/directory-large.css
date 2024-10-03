@@ -136,6 +136,36 @@ header p {
     text-decoration: none;
 }
 
+.selection {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    
+}
+
+
+#cards.list {
+    display: flex;
+    flex-direction: column;
+}
+
+#cards.list section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0px;
+    padding: 5px;
+}
+
+#cards.list section:nth-child(odd) {
+    background-color: grey;
+}
+
+.list section img {
+    display: none;
+}
+
 @media (max-width: 500px) {
     body {
         display: flex;
@@ -148,13 +178,61 @@ header p {
 
     }
 
+
     .hero img {
         margin-right: 0px;
         width: auto;
         height: 100%;
     }
 
-    #cloud {}
+    #menu {
+        display: block;
+        font-size: small;
+        font-weight: 700;
+        text-decoration: none;
+        padding: .5rem .75rem;
+        background-color: black;
+        color: white;
+        text-align: center;
+        border-radius: 25px;
+    }
+
+    ul.navigation.show {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    ul.navigation.show a {
+        text-decoration: none;
+        justify-content: center;
+        color: white;
+
+    }
+
+    ul.navigation.show a:hover {
+        color: green;
+    }
+
+    .navigation li {
+        display: none;
+    }
+
+    .show li {
+        display: block;
+    }
+
+    #menu.show::before {
+        content: "X";
+    }
+
+
+
+
+
+    #menu::before {
+        content: "☰"
+    }
 
     header img {
         padding: 0;
@@ -164,9 +242,30 @@ header p {
 
     }
 
+    main {
+        width: 100%;
+        margin: 0px;
+    }
+
+    #cards {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+    }
+
     .middle-section {
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
 
     header {
