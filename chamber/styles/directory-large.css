@@ -163,7 +163,7 @@ button#grid {
 }
 
 #cards.list section:nth-child(odd) {
-    background-color: grey;
+    background-color: white;
 }
 
 .list section img {
@@ -210,7 +210,7 @@ button#grid {
     ul.navigation.show a {
         text-decoration: none;
         justify-content: center;
-        color: white;
+        color: black;
 
     }
 
