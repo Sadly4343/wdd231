@@ -10,7 +10,7 @@ document.getElementById("lastModified").innerHTML = date;
 const mainnav = document.querySelector('.navigation')
 const hambutton = document.querySelector('#menu')
 
-
+const myTown = document.querySelector('#town');
 const currentTemp = document.querySelector('#current-temp');
 const weatherIcon = document.querySelector('#weather-icon');
 const captionDesc = document.querySelector('figcaption');
@@ -34,6 +34,11 @@ async function apiFetch() {
 }
 
 apiFetch();
+
+function displayResults(data) {
+    console.log('hello')
+    myTown.innerHTML = data.name
+}
 
 
 hambutton.addEventListener('click', () => {
@@ -66,6 +71,16 @@ async function getCompanyData() {
 }
 
 getCompanyData();
+
+function getRandomCompanies(arr) {
+    const randomIndex = Math.floor(Math.random() * arr.length);
+
+    const item = companies[randomIndex]
+
+    return item;
+}
+const result = getRandomCompanies(array);
+console.log(result);
 
 const displayCompanies = (companies) => {
     companies.forEach((companie) => {
