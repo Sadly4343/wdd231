@@ -11,6 +11,31 @@ const mainnav = document.querySelector('.navigation')
 const hambutton = document.querySelector('#menu')
 
 
+const currentTemp = document.querySelector('#current-temp');
+const weatherIcon = document.querySelector('#weather-icon');
+const captionDesc = document.querySelector('figcaption');
+const myLat = "49.75"
+const myLong = "6.64"
+const myKey = "7e24bd07a671401393a59148294ed723"
+const myURL = 'https://api.openweathermap.org/data/2.5/weather?lat={myLat}&lon={myLong}&appid={myKey}';
+async function apiFetch() {
+    try {
+        const response = await fetch(myURL);
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data); // testing only
+            // displayResults(data); // uncomment when ready
+        } else {
+            throw Error(await response.text());
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+apiFetch();
+
+
 hambutton.addEventListener('click', () => {
     mainnav.classList.toggle('show');
     hambutton.classList.toggle('show');
@@ -31,11 +56,11 @@ function showList() {
     display.classList.remove("grid");
 }
 
-const url = 'https://raw.githubusercontent.com/Sadly4343/wdd231/refs/heads/main/chamber/data/members.json'
+const urls = 'https://raw.githubusercontent.com/Sadly4343/wdd231/refs/heads/main/chamber/data/members.json'
 const cards = document.querySelector('#cards')
 
 async function getCompanyData() {
-    const response = await fetch(url);
+    const response = await fetch(urls);
     const data = await response.json();
     displayCompanies(data.companies);
 }
@@ -53,12 +78,14 @@ const displayCompanies = (companies) => {
             let address = document.createElement('p');
             let phone = document.createElement('p');
             let website = document.createElement('a');
+            let membership = document.createElement('p');
 
 
             fullName.textContent = companie.name;
             address.textContent = companie.address;
             phone.textContent = companie.phone;
             website.textContent = companie.website;
+            website.textContent = companie.membership
             website.setAttribute('href', companie.website)
             image.setAttribute('src', companie.image);
             image.setAttribute('alt', `images of ${companie.name} totally`);
@@ -72,6 +99,7 @@ const displayCompanies = (companies) => {
             card.appendChild(address);
             card.appendChild(phone);
             card.appendChild(website);
+            card.appendChild(membership);
 
             cards.appendChild(card);
         }
