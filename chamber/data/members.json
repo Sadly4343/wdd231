@@ -6,7 +6,7 @@
             "phone": "(123) 456-7890",
             "website": "https://www.techinnovators.com",
             "image": "images/bee.svg",
-            "membership": ""
+            "membership": "1"
         },
         {
             "name": "Green Solutions LLC",
@@ -14,7 +14,7 @@
             "phone": "(234) 567-8901",
             "website": "https://www.greensolutions.com",
             "image": "images/green.svg",
-            "membership": ""
+            "membership": "2"
         },
         {
             "name": "Health First Corp.",
@@ -22,7 +22,7 @@
             "phone": "(345) 678-9012",
             "website": "https://www.healthfirst.com",
             "image": "images/health.svg",
-            "membership": ""
+            "membership": "3"
         },
         {
             "name": "EduTech Enterprises",
@@ -30,7 +30,7 @@
             "phone": "(456) 789-0123",
             "website": "https://www.edutech.com",
             "image": "images/education.svg",
-            "membership": ""
+            "membership": "2"
         },
         {
             "name": "Finance Pros Ltd.",
@@ -38,7 +38,7 @@
             "phone": "(567) 890-1234",
             "website": "https://www.financepros.com",
             "image": "images/finance.svg",
-            "membership": ""
+            "membership": "2"
         },
         {
             "name": "Creative Minds Studio",
@@ -46,7 +46,7 @@
             "phone": "(678) 901-2345",
             "website": "https://www.creativeminds.com",
             "image": "images/creative.svg",
-            "membership": ""
+            "membership": "3"
         },
         {
             "name": "Travel Experts Co.",
@@ -54,7 +54,7 @@
             "phone": "(789) 012-3456",
             "website": "https://www.travelexperts.com",
             "image": "images/travel.svg",
-            "membership": ""
+            "membership": "2"
         }
     ]
 }
