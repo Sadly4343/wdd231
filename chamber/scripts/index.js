@@ -14,8 +14,8 @@ const myTown = document.querySelector('#town');
 const currentTemp = document.querySelector('#current-temp');
 const weatherIcon = document.querySelector('#weather-icon');
 const captionDesc = document.querySelector('figcaption');
-const lat = "49.75"
-const lon = "6.64"
+const lat = "47.7099"
+const lon = "-117.0798"
 const API = "d2170a830a0c08ae839d11c09553864e"
 const url = `api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API}`
 async function apiFetch() {
