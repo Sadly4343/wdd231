@@ -7,22 +7,24 @@ class="highlight">${today.getFullYear()}</span>`;
 const date = new Date(document.lastModified);
 document.getElementById("lastModified").innerHTML = date;
 
-const mainnav = document.querySelector('.navigation')
-const hambutton = document.querySelector('#menu')
+const mainnav = document.querySelector('.navigation');
+const hambutton = document.querySelector('#menu');
 
 const myTown = document.querySelector('#town');
 const currentTemp = document.querySelector('#current-temp');
 const weatherIcon = document.querySelector('#weather-icon');
 const captionDesc = document.querySelector('figcaption');
-const lat = "47.7099"
-const lon = "-117.0798"
-const API = "d2170a830a0c08ae839d11c09553864e"
-const url = `api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API}`
+const lat = "47.7099";
+const lon = "-117.0798";
+const API = "7e24bd07a671401393a59148294ed723";
+const url = 'https://api.openweathermap.org/data/2.5/weather?lat=47.7099&lon=-117.0798&appid=7e24bd07a671401393a59148294ed723}'; // Added https://
+
 async function apiFetch() {
     try {
         const response = await fetch(url);
         if (response.ok) {
             const data = await response.json();
+            displayResults(data); // Call displayResults with the fetched data
         } else {
             throw Error(await response.text());
         }
@@ -30,21 +32,18 @@ async function apiFetch() {
         console.log(error);
     }
 }
+
 apiFetch();
 
-
 function displayResults(data) {
-    console.log('hello')
+    console.log(data); // Display the fetched data
 }
-
-
-
-
 
 hambutton.addEventListener('click', () => {
     mainnav.classList.toggle('show');
     hambutton.classList.toggle('show');
 });
+
 const gridbutton = document.querySelector("#grid");
 const listbutton = document.querySelector("#list");
 const display = document.querySelector("#cards");
@@ -119,6 +118,4 @@ const displayCompanies = (companies) => {
             cards.appendChild(card);
         }
     });
-
-
 }
