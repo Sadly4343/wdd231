@@ -30,12 +30,13 @@ async function apiFetch() {
         console.log(error);
     }
 }
+apiFetch();
 
 
 function displayResults(data) {
     console.log('hello')
 }
-apiFetch();
+
 
 
 
