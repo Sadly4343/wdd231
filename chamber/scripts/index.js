@@ -14,10 +14,10 @@ const myTown = document.querySelector('#town');
 const currentTemp = document.querySelector('#current-temp');
 const weatherIcon = document.querySelector('#weather-icon');
 const captionDesc = document.querySelector('figcaption');
-const myLat = "49.75"
-const myLong = "6.64"
-const myKey = "7e24bd07a671401393a59148294ed723"
-const myURL = 'https://api.openweathermap.org/data/2.5/weather?lat={myLat}&lon={myLong}&appid={myKey}';
+const lat = "49.75"
+const lon = "6.64"
+const API = "7e24bd07a671401393a59148294ed723"
+const myURL = 'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API}'
 async function apiFetch() {
     try {
         const response = await fetch(myURL);
