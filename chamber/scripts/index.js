@@ -16,11 +16,11 @@ const weatherIcon = document.querySelector('#weather-icon');
 const captionDesc = document.querySelector('figcaption');
 const lat = "49.75"
 const lon = "6.64"
-const API = "fb88d16d51e5eb4ca62d796a41af4255"
-const myURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API}`
+const API = "d2170a830a0c08ae839d11c09553864e"
+const url = `api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API}`
 async function apiFetch() {
     try {
-        const response = await fetch(myURL);
+        const response = await fetch(url);
         if (response.ok) {
             const data = await response.json();
         } else {
@@ -31,11 +31,11 @@ async function apiFetch() {
     }
 }
 
-apiFetch();
 
 function displayResults(data) {
     console.log('hello')
 }
+apiFetch();
 
 
 
