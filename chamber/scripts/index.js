@@ -16,24 +16,9 @@ const weatherIcon = document.querySelector('#weather-icon');
 const captionDesc = document.querySelector('figcaption');
 const lat = "47.7099";
 const lon = "-117.0798";
-const url = `https://api.openweathermap.org/data/2.5/`
-const API_KEY = '7e24bd07a671401393a59148294ed723' //API KEY
+const API = "7e24bd07a671401393a59148294ed723";
+const url = 'https://api.openweathermap.org/data/2.5/weather??lat=47.7099&lon=-117.0798&appid=7e24bd07a671401393a59148294ed723}'; // Added https://
 
-async function getWeather() {
-    try {
-        const response = await fetch(`${url}weather?lat=${4.61}&lon=${-74.12}&units=metric&appid=${API_KEY}`)
-
-        if (response.ok) {
-            const data = await response.json()
-            return data
-        } else {
-            throw new Error(await response.json())
-        }
-    } catch (err) {
-        console.error(err)
-        return {}
-    }
-}
 async function apiFetch() {
     try {
         const response = await fetch(url);
