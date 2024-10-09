@@ -17,7 +17,7 @@ const captionDesc = document.querySelector('figcaption');
 const lat = "47.7099";
 const lon = "-117.0798";
 const API = "7e24bd07a671401393a59148294ed723";
-const url = 'https://api.openweathermap.org/data/2.5/weather??lat=47.7099&lon=-117.0798&appid=7e24bd07a671401393a59148294ed723}'; // Added https://
+const url = 'https://api.openweathermap.org/data/2.5/weather?lat=47.7099&lon=-117.0798&appid=7e24bd07a671401393a59148294ed723}'; // Added https://
 
 async function apiFetch() {
     try {
