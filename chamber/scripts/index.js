@@ -12,7 +12,7 @@ const hambutton = document.querySelector('#menu');
 
 const myTown = document.querySelector('#town');
 const currentTemp = document.querySelector('#temperature');
-const waters = document.querySelector('#waters');
+const waters = document.querySelector('#total');
 const weather = document.querySelector('#description');
 const weatherIcon = document.querySelector('#weather-icon');
 const captionDesc = document.querySelector('figcaption');
