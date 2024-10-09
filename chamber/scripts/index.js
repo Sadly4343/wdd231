@@ -11,17 +11,17 @@ const mainnav = document.querySelector('.navigation');
 const hambutton = document.querySelector('#menu');
 
 const myTown = document.querySelector('#town');
-const currentTemp = document.querySelector('#current-temp');
+const currentTemp = document.querySelector('#description');
 const weatherIcon = document.querySelector('#weather-icon');
 const captionDesc = document.querySelector('figcaption');
-const lat = "47.7099";
-const lon = "-117.0798";
-const API = "7e24bd07a671401393a59148294ed723";
-const url = 'https://api.openweathermap.org/data/2.5/weather?lat=47.7099&lon=-117.0798&appid=7e24bd07a671401393a59148294ed723}'; // Added https://
+const lat = "47.7099"
+const lon = "-117.0798"
+const myKey = "7e24bd07a671401393a59148294ed723"
+const myURL = `//api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${myKey}&units=imperial`// Added https://
 
 async function apiFetch() {
     try {
-        const response = await fetch(url);
+        const response = await fetch(myURL);
         if (response.ok) {
             const data = await response.json();
             displayResults(data); // Call displayResults with the fetched data
@@ -33,10 +33,15 @@ async function apiFetch() {
     }
 }
 
+
+
 apiFetch();
 
 function displayResults(data) {
-    console.log(data); // Display the fetched data
+    console.log(data);
+    myTown.innerHTML = data.name
+    currentTemp.innerHTML = `{data.main.temp}&deg;F`
+    // Display the fetched data
 }
 
 hambutton.addEventListener('click', () => {
