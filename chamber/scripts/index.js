@@ -11,20 +11,36 @@ const mainnav = document.querySelector('.navigation');
 const hambutton = document.querySelector('#menu');
 
 const myTown = document.querySelector('#town');
-const currentTemp = document.querySelector('#description');
+const currentTemp = document.querySelector('#temperature');
+const waters = document.querySelector('#waters');
+const weather = document.querySelector('#description');
 const weatherIcon = document.querySelector('#weather-icon');
 const captionDesc = document.querySelector('figcaption');
 const lat = "47.7099"
 const lon = "-117.0798"
 const myKey = "7e24bd07a671401393a59148294ed723"
 const myURL = `//api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${myKey}&units=imperial`// Added https://
+const myForecast = `//api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${myKey}&units=imperial`
 
 async function apiFetch() {
     try {
         const response = await fetch(myURL);
         if (response.ok) {
-            const data = await response.json();
-            displayResults(data); // Call displayResults with the fetched data
+            const weather = await response.json();
+            displayResults(weather); // Call displayResults with the fetched data
+        } else {
+            throw Error(await response.text());
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
+async function apiForecast() {
+    try {
+        const response = await fetch(myForecast);
+        if (response.ok) {
+            const data2 = await response.json();
+            displayResults2(data2); // Call displayResults with the fetched data
         } else {
             throw Error(await response.text());
         }
@@ -34,15 +50,24 @@ async function apiFetch() {
 }
 
 
+function displayResults(weather) {
+    console.log(weather)
+    myTown.innerHTML = weather.name;
+    currentTemp.innerHTML = `${weather.main.temp}&deg;F`;
+    waters.innerHTML = weather.weather[0].description
 
-apiFetch();
 
-function displayResults(data) {
-    console.log(data);
-    myTown.innerHTML = data.name
-    currentTemp.innerHTML = `{data.main.temp}&deg;F`
-    // Display the fetched data
 }
+const index = 8;
+function displayResults2(data2) {
+    weather.innerHTML = `${data2.list[index].main.temp}&deg;F`
+
+
+
+
+}
+apiFetch();
+apiForecast();
 
 hambutton.addEventListener('click', () => {
     mainnav.classList.toggle('show');
