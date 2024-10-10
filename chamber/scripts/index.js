@@ -60,7 +60,9 @@ function displayResults(weather) {
 }
 const index = 8;
 function displayResults2(data2) {
-    weather.innerHTML = `${data2.list[index].main.temp}&deg;F`
+    weather.innerHTML = `${data2.list[0].main.temp}&deg;F`
+    weather.innerHTML = `${data2.list[8].main.temp}&deg;F`
+    weather.innerHTML = `${data2.list[16].main.temp}&deg;F`
 
 
 
