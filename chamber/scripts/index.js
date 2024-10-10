@@ -12,7 +12,9 @@ const hambutton = document.querySelector('#menu');
 
 const myTown = document.querySelector('#town');
 const currentTemp = document.querySelector('#temperature');
-const waters = document.querySelector('#total');
+const oneDay = document.querySelector('#one');
+const twoDay = document.querySelector('#two');
+const threeDay = document.querySelector('#three');
 const weather = document.querySelector('#description');
 const weatherIcon = document.querySelector('#weather-icon');
 const captionDesc = document.querySelector('figcaption');
@@ -54,15 +56,15 @@ function displayResults(weather) {
     console.log(weather)
     myTown.innerHTML = weather.name;
     currentTemp.innerHTML = `${weather.main.temp}&deg;F`;
-    waters.innerHTML = weather.weather[0].description
+    weather.innerHTML = weather.weather[0].description
 
 
 }
 const index = 8;
 function displayResults2(data2) {
-    weather.innerHTML = `${data2.list[0].main.temp}&deg;F`
-    weather.innerHTML = `${data2.list[8].main.temp}&deg;F`
-    weather.innerHTML = `${data2.list[16].main.temp}&deg;F`
+    oneDay.innerHTML = `${data2.list[0].main.temp}&deg;F`
+    twoDay.innerHTML = `${data2.list[8].main.temp}&deg;F`
+    threeDay.innerHTML = `${data2.list[16].main.temp}&deg;F`
 
 
 
