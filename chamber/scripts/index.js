@@ -94,20 +94,34 @@ function showList() {
 
 const urls = 'https://raw.githubusercontent.com/Sadly4343/wdd231/refs/heads/main/chamber/data/members.json'
 const cards = document.querySelector('#cards')
-
+companiesData = [];
 async function getCompanyData() {
     const response = await fetch(urls);
     const data = await response.json();
+    companiesData = data.companies;
     displayCompanies(data.companies);
 }
 
 getCompanyData();
 
-const displayCompanies = (companies) => {
+function shuffle(comprand) {
+    let currentIndex = comprand.length;
+
+    while (currentIndex != 0) {
+        let randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        [comprand[currentIndex], comprand[randomIndex]] = [comprand[randomIndex], comprand[currentIndex]]
+    }
+}
+shuffle(companiesData);
+
+const displayCompanies = (companiesData) => {
     let cardCount = 0;
-    companies.forEach((companie) => {
+    companiesData.forEach((companie) => {
 
         if (companie.membership != "1" && cardCount < 3) {
+            cardCount += 1
 
             let card = document.createElement('section');
             let fullName = document.createElement('h8');
