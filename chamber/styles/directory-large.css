@@ -161,6 +161,31 @@ header p {
     text-decoration: none;
 }
 
+.card p {
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    justify-content: left;
+}
+
+#one::before {
+    content: "Saturday ";
+    font-weight: bold;
+
+}
+
+#two::before {
+    content: "Sunday  ";
+    font-weight: bold;
+
+}
+
+#three::before {
+    content: "Monday  ";
+    font-weight: bold;
+}
+
+
 .selection {
     display: flex;
     flex-direction: column;

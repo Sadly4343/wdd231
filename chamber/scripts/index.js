@@ -10,12 +10,12 @@ document.getElementById("lastModified").innerHTML = date;
 const mainnav = document.querySelector('.navigation');
 const hambutton = document.querySelector('#menu');
 
-const myTown = document.querySelector('#town');
+
 const currentTemp = document.querySelector('#temperature');
 const oneDay = document.querySelector('#one');
 const twoDay = document.querySelector('#two');
 const threeDay = document.querySelector('#three');
-const weather = document.querySelector('#description');
+const weathers = document.querySelector('#description');
 const weatherIcon = document.querySelector('#weather-icon');
 const captionDesc = document.querySelector('figcaption');
 const lat = "47.7099"
@@ -51,12 +51,10 @@ async function apiForecast() {
     }
 }
 
-
 function displayResults(weather) {
     console.log(weather)
-    myTown.innerHTML = weather.name;
     currentTemp.innerHTML = `${weather.main.temp}&deg;F`;
-    weather.innerHTML = weather.weather[0].description
+    weathers.innerHTML = weather.weather[0].description
 
 
 }
@@ -105,20 +103,11 @@ async function getCompanyData() {
 
 getCompanyData();
 
-function getRandomCompanies(arr) {
-    const randomIndex = Math.floor(Math.random() * arr.length);
-
-    const item = companies[randomIndex]
-
-    return item;
-}
-const result = getRandomCompanies(array);
-console.log(result);
-
 const displayCompanies = (companies) => {
+    let cardCount = 0;
     companies.forEach((companie) => {
 
-        if (companie.membership != "1") {
+        if (companie.membership != "1" && cardCount < 3) {
 
             let card = document.createElement('section');
             let fullName = document.createElement('h8');
