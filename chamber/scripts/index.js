@@ -99,22 +99,22 @@ async function getCompanyData() {
     const response = await fetch(urls);
     const data = await response.json();
     companiesData = data.companies;
+    shuffle(companiesData);
     displayCompanies(data.companies);
 }
 
 getCompanyData();
 
-function shuffle(comprand) {
-    let currentIndex = comprand.length;
+function shuffle(array) {
+    let currentIndex = array.length;
 
     while (currentIndex != 0) {
         let randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex--;
 
-        [comprand[currentIndex], comprand[randomIndex]] = [comprand[randomIndex], comprand[currentIndex]]
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]]
     }
 }
-shuffle(companiesData);
 
 const displayCompanies = (companiesData) => {
     let cardCount = 0;
