@@ -21,8 +21,8 @@ const captionDesc = document.querySelector('figcaption');
 const lat = "47.7099"
 const lon = "-117.0798"
 const myKey = "7e24bd07a671401393a59148294ed723"
-const myURL = `https//api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${myKey}&units=imperial`// Added https://
-const myForecast = `https//api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${myKey}&units=imperial`
+const myURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${myKey}&units=imperial`// Added https://
+const myForecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${myKey}&units=imperial`
 
 async function apiFetch() {
     try {

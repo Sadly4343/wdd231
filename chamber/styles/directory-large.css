@@ -60,8 +60,8 @@ footer {
     justify-content: space-between;
     margin: 0 auto;
     width: 80%;
+    height: auto;
     background-color: #78FF94;
-    ;
     padding: 20px;
     border-style: solid;
 }
