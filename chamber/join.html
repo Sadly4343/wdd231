@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora Chamber of Commerce Directory Page </title>
+    <meta name="description" content="Directory Page for Aurora Chamber of Commerce ">
+    <meta name="author" content="Logan Hartshorn">
+    <script src="scripts/directory.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="styles/directory.css">
+    <link rel="stylesheet" type="text/css" href="styles/directory-large.css">
+    <link rel="icon" href="favicon.ico">
+    <meta property="og:url" content="https://sadly4343.github.io/wdd231/chamber/directory">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Aurora Chamber of Commerce Home Page">
+    <meta property="og:title" content="Aurora Chamber of Commerce">
+    <meta property="og:image" content="https://sadly4343.github.io/wdd231/chamber/images/hero-large.webp">
+    <meta property="og:image:alt" content="">
+</head>
+
+<body>
+    <header>
+        <img src="images/aurora-header.webp" alt="Aurora Chamber of Commerce Picture">
+        <div class="title">
+            <h1>Aurora</h1>
+            <p>Chamber of Commerce</p>
+        </div>
+        <a id="menu" href="#"></a>
+        <nav>
+            <ul class="navigation">
+                <li><a class="active" href="directory.html">Home
+                    </a></li>
+                <li><a href=" https://byui.instructure.com">Chamber
+                    </a></li>
+                <li><a href="https://github.com/Sadly4343">Join
+                    </a></li>
+                <li><a href="https://www.linkedin.com">Discover
+                    </a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h3>Choose a Membership!</h3>
+            <form onsubmit="save_data()" action="review.html" method="get" class="form" autocomplete="on">
+                <label for="fname">First Name*</label>
+                <div class="username">
+                    <input type="text" id="fname" name="fname" required autocomplete="on">
+                </div>
+                <label for="lname">Last Name*</label>
+                <div class="username">
+                    <input type="text" id="lname" name="lname" required autocomplete="on">
+                </div>
+                <label for="email">Email Address*</label>
+                <div class="email">
+                    <input type="email" id="email" name="email" required autocomplete="on">
+                </div>
+                <label for="organ">Organization*</label>
+                <div class="username">
+                    <input type="text" id="organ" name="organ" required autocomplete="on">
+                </div>
+                <label for="phone_number">Phone Number*</label>
+                <div class="phone_number">
+                    <input type="tel" id="phone_number" name="phone_number" required autocomplete="on">
+                </div>
+                <label for="select-trip">Membership Level*</label>
+                <div class="select">
+                    <select name="select-trip" id="select-trip" required>
+                        <option value="" disabled selected>Available Memberships</option>
+                        <option value="NP Membership">NP Membership</option>
+                        <option value="Bronze Membership">Bronze Membership</option>
+                        <option value="Silver Membership">Silver Membership</option>
+                        <option value="Gold Membership">Gold Membership</option>
+                    </select>
+                </div>
+                <label for="description">Description</label>
+                <div clas="description">
+                    <textarea id="description" name="description"></textarea>
+                </div>
+                <input type="hidden" id="timestamp" name="timestamp">
+                <div class="complete-membership">
+                    <input type="submit" id="submit" value="Complete Membership!">
+                </div>
+
+
+            </form>
+        </section>
+        <div id="cards">
+
+        </div>
+    </main>
+    <footer>
+        <section>
+            <h5>Aurora Chamber of Commerce</h5>
+            <p>25 Aurora Lane Snow Eve</p>
+            <p>Aurora, Frostwolf 865</p>
+            <p>info@auroraucc.org</p>
+            <p>(123) 535-5355</p>
+
+        </section>
+        <section class="social-media">
+            <h5>Social Media Links</h5>
+            <p>
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="images/youtube-icon.svg" alt="Youtube Icon" width="48" height="48">
+                </a>
+            </p>
+            <p>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="images/twitter-icon.svg" alt="Twitter Icon" width="48" height="48">
+                </a>
+            </p>
+            <p>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img src="images/linkedin-icon.svg" alt="Youtube Icon" width="48" height="48">
+                </a>
+            </p>
+
+
+        </section>
+        <section>
+            <h5>Copyright</h5>
+            <p>WDD231 Class Project</p>
+            <p>
+                <span id="currentyear"></span>
+                🌕 Logan Hartshorn 🌕
+                Aurora Chamber of Commerce
+            </p>
+            <p id="lastModified">
+            </p>
+
+
+        </section>
+
+    </footer>
+</body>
+
+</html>
