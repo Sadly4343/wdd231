@@ -3,6 +3,12 @@ body {
     font-family: 'Exo 2', sans-serif;
 }
 
+main {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+}
+
 header {
     display: flex;
     align-items: end;
@@ -51,12 +57,80 @@ dialog button {
 
 }
 
+form input {
+    width: 90%;
+    border-radius: 25px;
+    padding: 5px;
+    margin: 3px;
+}
+
+form label {
+    padding: 5px;
+}
+
+#memberForm {
+    padding: 0px;
+
+    height: fit-content;
+}
+
+form {
+    background-color: white;
+    margin: 0px;
+    height: fit-content;
+    color: red;
+}
+
+textarea {
+    width: 90%;
+    height: 50px;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 3px;
+}
+
+select {
+    width: 95%;
+    border-radius: 25px;
+    padding: 5px;
+    margin: 3px;
+
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+#submit {}
+
+
 #cards {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr;
     width: 80%;
     margin: 0 auto;
+    animation-duration: 3s;
+    animation-name: slidein;
 
+
+}
+
+@keyframes slidein {
+    from {
+        translate: 150vw 0;
+        scale: 200% 1;
+    }
+
+    to {
+        translate: 0 0;
+        scale: 100% 1;
+    }
+}
+
+main {
+    width: 80%;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 #cards section {
@@ -243,11 +317,25 @@ button#grid {
     display: none;
 }
 
+
+
 @media (max-width: 500px) {
     body {
         display: flex;
         flex-direction: column;
     }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    footer {
+        display
+    }
+
+
 
     .hero {
         width: auto;
@@ -319,23 +407,19 @@ button#grid {
 
     }
 
-    main {
-        width: 100%;
-        margin: 0px;
-    }
 
     #cards {
         display: flex;
         flex-direction: column;
         margin: 0;
         text-align: center;
-        width: 100%;
+        width: fit-content;
     }
 
     footer {
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 80%;
         margin: 0 auto;
     }
 
@@ -350,6 +434,8 @@ button#grid {
         height: auto;
         align-items: center;
         padding: 10px;
+        margin: 0 auto;
+
 
     }
 }

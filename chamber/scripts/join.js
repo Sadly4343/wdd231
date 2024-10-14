@@ -66,13 +66,14 @@ const displayMembership = (memberships) => {
         // Create elements to add to the div.cards element
         let card = document.createElement('section');
         let fullName = document.createElement('h2'); // fill in the blank
-
+        let infobutton = document.createElement('button');
 
         fullName.textContent = membership.name;
-
+        infobutton.textContent = 'Learn More';
         // Append the section(card) with the created elements
-        card.appendChild(fullName); //fill in the blank
-        card.addEventListener('click', () => {
+        card.appendChild(fullName);
+        card.appendChild(infobutton); //fill in the blank
+        infobutton.addEventListener('click', () => {
             displayMemberDetails(arrayMemberDetails[index]);
         });
 
