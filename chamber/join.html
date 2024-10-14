@@ -46,32 +46,35 @@
             <form onsubmit="save_data()" action="review.html" method="get" class="form" autocomplete="on">
                 <label for="fname">First Name*</label>
                 <div class="username">
-                    <input type="text" id="fname" name="fname" required autocomplete="on">
+                    <input type="text" id="fname" name="fname" required autocomplete="on" title="Your first name below">
                 </div>
                 <label for="lname">Last Name*</label>
                 <div class="username">
-                    <input type="text" title id="lname" name="lname" required autocomplete="on">
+                    <input type="text" title id="lname" name="lname" required autocomplete="on"
+                        title="Your last name below">
                 </div>
                 <label for="organtitle">Organization Title*</label>
                 <div class="organtitle">
                     <input type="text" id="organtitle" name="organtitle" required autocomplete="organization-title"
-                        pattern="^[a-zA-Z -]+$.{7,}">
+                        pattern="^[a-zA-Z -]+$.{7,}" title="Your organization title must be more than 7 characters">
                 </div>
                 <label for="email">Email Address*</label>
                 <div class="email">
-                    <input type="email" id="email" name="email" required autocomplete="on">
+                    <input type="email" id="email" name="email" required autocomplete="on" title="email address below">
                 </div>
                 <label for="organ">Organization*</label>
                 <div class="organ">
-                    <input type="text" id="organ" name="organ" required autocomplete="on">
+                    <input type="text" id="organ" name="organ" required autocomplete="on"
+                        title="organization name below">
                 </div>
                 <label for="phone_number">Phone Number*</label>
                 <div class="phone_number">
-                    <input type="tel" id="phone_number" name="phone_number" required autocomplete="on">
+                    <input type="tel" id="phone_number" name="phone_number" required autocomplete="on"
+                        title="Input phone number below">
                 </div>
                 <label for="select-trip">Membership Level*</label>
                 <div class="select-trip">
-                    <select name="select-trip" id="select-trip" required>
+                    <select name="select-trip" id="select-trip" required title="Choose your membership below">
                         <option value="" disabled selected>Available Memberships</option>
                         <option value="NP Membership">NP Membership</option>
                         <option value="Bronze Membership">Bronze Membership</option>
@@ -81,7 +84,7 @@
                 </div>
                 <label for="description">Description</label>
                 <div class="description">
-                    <textarea id="description" name="description"></textarea>>
+                    <textarea id="description" name="description" title="Description of your business"></textarea>>
                 </div>
                 <input type="hidden" id="timestamp" name="timestamp">
                 <div class="complete-membership">
