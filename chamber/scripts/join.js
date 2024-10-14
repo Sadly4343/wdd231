@@ -47,12 +47,12 @@ async function getCompanyData() {
 
 getCompanyData();
 
-function displayMemberDetails(memberDetail) {
+function displayMemberDetails(arrayMemberDetail) {
     memberDetails.innerHTML = '';
     memberDetails.innerHTML = `
     <button id="closeModal">❌</button>
-    <h2>${memberDetail.cost}</h2>
-    <h3>${memberDetail.benefits}</h3>`;
+    <h2>${arrayMemberDetail.cost}</h2>
+    <h3>${arrayMemberDetail.benefits}</h3>`;
 
     memberDetails.showModal();
     const closeModal = document.getElementById('closeModal');
@@ -65,7 +65,7 @@ const displayMembership = (memberships) => {
     memberships.forEach((membership, index) => {
         // Create elements to add to the div.cards element
         let card = document.createElement('section');
-        let fullName = document.createElement('h8'); // fill in the blank
+        let fullName = document.createElement('h2'); // fill in the blank
 
 
         fullName.textContent = membership.name;
@@ -73,7 +73,7 @@ const displayMembership = (memberships) => {
         // Append the section(card) with the created elements
         card.appendChild(fullName); //fill in the blank
         card.addEventListener('click', () => {
-            displayMemberDetails(memberDetails[index]);
+            displayMemberDetails(arrayMemberDetails[index]);
         });
 
         cards.appendChild(card);
