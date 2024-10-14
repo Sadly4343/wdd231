@@ -50,11 +50,12 @@
                 </div>
                 <label for="lname">Last Name*</label>
                 <div class="username">
-                    <input type="text" id="lname" name="lname" required autocomplete="on">
+                    <input type="text" title id="lname" name="lname" required autocomplete="on">
                 </div>
                 <label for="organtitle">Organization Title*</label>
                 <div class="organtitle">
-                    <input type="text" id="organtitle" name="organtitle" required autocomplete="on">
+                    <input type="text" id="organtitle" name="organtitle" required autocomplete="organization-title"
+                        pattern="^[a-zA-Z -]+$.{7,}">
                 </div>
                 <label for="email">Email Address*</label>
                 <div class="email">
