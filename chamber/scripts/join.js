@@ -38,39 +38,22 @@ async function getCompanyData() {
     const response = await fetch(url);
     const data = await response.json();
     //console.table(data.companies); // temporary testing of data response
-    displayCompanies(data.companies);
+    displayCompanies(data.memberships);
 }
 
 getCompanyData();
 
-const displayMembership = (companies) => {
-    companies.forEach((companie) => {
+const displayMembership = (memberships) => {
+    memberships.forEach((membership) => {
         // Create elements to add to the div.cards element
         let card = document.createElement('section');
         let fullName = document.createElement('h8'); // fill in the blank
-        let image = document.createElement('img');
-        let address = document.createElement('p');
-        let phone = document.createElement('p');
-        let website = document.createElement('a');
 
 
-        fullName.textContent = companie.name;
-        address.textContent = companie.address;
-        phone.textContent = companie.phone;
-        website.textContent = companie.website;
-        website.setAttribute('href', companie.website)
-        image.setAttribute('src', companie.image);
-        image.setAttribute('alt', `images of ${companie.name} totally`); // fill in the blank
-        image.setAttribute('loading', 'lazy');
-        image.setAttribute('width', '48');
-        image.setAttribute('height', '48');
+        fullName.textContent = membership.name;
 
         // Append the section(card) with the created elements
         card.appendChild(fullName); //fill in the blank
-        card.appendChild(image);
-        card.appendChild(address);
-        card.appendChild(phone);
-        card.appendChild(website);
 
         cards.appendChild(card);
     }); // end of arrow function and forEach loop
