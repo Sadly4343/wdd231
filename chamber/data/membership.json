@@ -1,16 +1,16 @@
 {
     "memberships": [
         {
-            "name": "Non-Profit Membership"
+            "name": "Non-Profit Membership Level"
         },
         {
-            "name": "Non-Profit Membership"
+            "name": "Bronze Membership Level"
         },
         {
-            "name": "Non-Profit Membership"
+            "name": "Silver Membership Level"
         },
         {
-            "name": "Non-Profit Membership"
+            "name": "Gold Membership Level"
         }
     ]
 }

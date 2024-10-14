@@ -15,21 +15,6 @@ hambutton.addEventListener('click', () => {
     mainnav.classList.toggle('show');
     hambutton.classList.toggle('show');
 });
-const gridbutton = document.querySelector("#grid");
-const listbutton = document.querySelector("#list");
-const display = document.querySelector("#cards");
-
-gridbutton.addEventListener("click", () => {
-    display.classList.add("grid");
-    display.classList.remove("list");
-});
-
-listbutton.addEventListener("click", showList);
-
-function showList() {
-    display.classList.add("list");
-    display.classList.remove("grid");
-}
 
 const url = 'https://raw.githubusercontent.com/Sadly4343/wdd231/refs/heads/main/chamber/data/membership.json'
 const cards = document.querySelector('#cards')
@@ -38,7 +23,7 @@ async function getCompanyData() {
     const response = await fetch(url);
     const data = await response.json();
     //console.table(data.companies); // temporary testing of data response
-    displayCompanies(data.memberships);
+    displayMembership(data.memberships);
 }
 
 getCompanyData();
