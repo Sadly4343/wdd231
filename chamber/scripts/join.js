@@ -15,9 +15,28 @@ hambutton.addEventListener('click', () => {
     mainnav.classList.toggle('show');
     hambutton.classList.toggle('show');
 });
+const arrayMemberDetails = [
+    {
+        "cost": "Free",
+        "benefits": "Free Newsletter and the chance for winning the sweepstakes each month."
+    },
+    {
+        "cost": "1000$",
+        "benefits": "Free Newsletter and the chance for winning the sweepstakes each month, invitation to weekly meetings."
+    },
+    {
+        "cost": "1500",
+        "benefits": "Free Newsletter and the chance for winning the sweepstakes each month, invitation to weekly meetings, improved advertisement."
+    },
+    {
+        "cost": "30000",
+        "benefits": "Free Newsletter and the chance for winning the sweepstakes each month, invitation to weekly meetings, improved advertisement and home page placement."
+    }
+];
 
 const url = 'https://raw.githubusercontent.com/Sadly4343/wdd231/refs/heads/main/chamber/data/membership.json'
-const cards = document.querySelector('#cards')
+const cards = document.querySelector('#cards');
+const memberDetails = document.getElementById('memberDetails');
 
 async function getCompanyData() {
     const response = await fetch(url);
@@ -28,8 +47,22 @@ async function getCompanyData() {
 
 getCompanyData();
 
+function displayMemberDetails(memberDetail) {
+    memberDetails.innerHTML = '';
+    memberDetails.innerHTML = `
+    <button id="closeModal">❌</button>
+    <h2>${memberDetail.cost}</h2>
+    <h3>${memberDetail.benefits}</h3>`;
+
+    memberDetails.showModal();
+    const closeModal = document.getElementById('closeModal');
+    closeModal.addEventListener("click", () => {
+        memberDetails.close();
+    });
+}
+
 const displayMembership = (memberships) => {
-    memberships.forEach((membership) => {
+    memberships.forEach((membership, index) => {
         // Create elements to add to the div.cards element
         let card = document.createElement('section');
         let fullName = document.createElement('h8'); // fill in the blank
@@ -39,6 +72,9 @@ const displayMembership = (memberships) => {
 
         // Append the section(card) with the created elements
         card.appendChild(fullName); //fill in the blank
+        card.addEventListener('click', () => {
+            displayMemberDetails(memberDetails[index]);
+        });
 
         cards.appendChild(card);
     }); // end of arrow function and forEach loop
