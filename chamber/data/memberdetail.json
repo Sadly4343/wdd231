@@ -1,0 +1,20 @@
+{
+    "memberdetails": [
+        {
+            "cost": "Free",
+            "benefits": "Free Newsletter and the chance for winning the sweepstakes each month."
+        },
+        {
+            "cost": "1000$",
+            "benefits": "Free Newsletter and the chance for winning the sweepstakes each month, invitation to weekly meetings."
+        },
+        {
+            "cost": "1500",
+            "benefits": "Free Newsletter and the chance for winning the sweepstakes each month, invitation to weekly meetings, improved advertisement."
+        },
+        {
+            "cost": "30000",
+            "benefits": "Free Newsletter and the chance for winning the sweepstakes each month,invitation to weekly meetings, improved advertisement and home page placement."
+        }
+    ]
+}

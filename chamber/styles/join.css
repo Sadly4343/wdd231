@@ -1,0 +1,12 @@
+.current-weather p {
+    display: flex;
+    justify-content: center;
+}
+
+#cards section {
+    background-color: #78FF94;
+}
+
+body {
+    font-family: 'Exo 2', sans-serif;
+}
