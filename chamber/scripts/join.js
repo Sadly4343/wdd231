@@ -15,7 +15,7 @@ function getDate() {
     const time = document.getElementById('timestamp');
     const timestamp = new Date();
     const timestamps = `${timestamp.toLocaleDateString()} ${timestamp.toLocaleTimeString()}`
-    timestamp.value = timestamps
+    time.value = timestamps
 }
 
 document.querySelector('form').addEventListener('submit', getDate);
