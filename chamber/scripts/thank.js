@@ -7,6 +7,12 @@ const everything = currentUrl.split('?')
 
 let formData = everything[1].split('&')
 console.log(formData)
+function dates() {
+    const results = formData[8]
+    resultss = decodeURIComponent(results).split('=')[1].replace('+', ' ');
+
+    return (resultss);
+}
 
 function show(cup) {
     console.log(cup)
@@ -17,10 +23,8 @@ function show(cup) {
     })
     return (result)
 }
-function dates() {
-    const results = formData.timestamp
-    console.log(results)
-}
+
+
 
 console.log('timestamp')
 const showInfo = document.querySelector('#info')
@@ -30,6 +34,6 @@ showInfo.innerHTML = `
 <p>Phone Number used ${show('phone')}</p>
 <p>Organization title ${show('organtitle')}
 <p>Organization name ${show('organ')}</p>
-<p> Submission Time ${show('timestamp')}</p>`
+<p> Submission Time ${dates()}</p>`
 
 
