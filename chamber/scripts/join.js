@@ -80,3 +80,19 @@ const displayMembership = (memberships) => {
         cards.appendChild(card);
     }); // end of arrow function and forEach loop
 }
+
+function save_data() {
+    const visitShown = document.querySelector("form");
+
+    let numVisits = Number(window.localStorage.getItem("visits-1s"));
+
+    if (numVisits < 1) {
+        visitShown.textContent = numVisits;
+    }
+    else {
+        visitShown.textContent = 'First visit';
+
+    }
+    numVisits++;
+    localStorage.setItem('visits-1s', numVisits)
+}
