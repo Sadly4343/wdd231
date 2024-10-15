@@ -8,16 +8,16 @@ console.log(everything)
 let formData = everything[1].split('&')
 console.log(formData)
 
-function show(end) {
-    console.log(end)
-    formData.forEach(element) => {
+function show(cup) {
+    console.log(cup)
+    formData.forEach((element) => {
         console.log(element)
         if (element.startsWith(end)) {
             result = element
         }
-    }
+    })
     return (result)
 }
 const showInfo = document.querySelector('#info')
-showInfo.innerHTML = show("phone")
+showInfo.innerHTML = show("first")
 
