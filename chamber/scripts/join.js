@@ -14,7 +14,7 @@ const hambutton = document.querySelector('#menu')
 function getDate() {
     const date1 = new Date();
     const month = date1.toLocaleString();
-    innerHTML.month = document.getElementById('timestamp');
+    document.getElementById("timestamp").innerHTML = month;
 }
 
 
