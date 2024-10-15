@@ -18,12 +18,14 @@ function show(cup) {
     return (result)
 }
 const showInfo = document.querySelector('#info')
+const timestamp = show('timestamp')
+const newTimestamp = new Date(timestamp).toLocaleString();
 showInfo.innerHTML = `
 <p>Membership Details For ${show('fname')} ${show('lname')}</p>
 <p>Confirmation Email ${show('email')}</p>
 <p>Phone Number used ${show('phone')}</p>
 <p>Organization title ${show('organtitle')}
 <p>Organization name ${show('organ')}</p>
-<p> Submission Time ${show('timestamp')}</p>`
+<p> Submission Time ${newTimestamp}</p>`
 
 
