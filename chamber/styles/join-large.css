@@ -138,14 +138,14 @@ form div {
     width: 100%;
     height: fit-content;
     margin: 0 auto;
-    animation-duration: 3s;
-    animation-name: slidein;
+    animation-duration: 1.5;
+    animation-name: movein;
 
 
 
 }
 
-@keyframes slidein {
+@keyframes movein {
     from {
         transform: translate3d(200%, 50%, 700px) scale(4)
     }
