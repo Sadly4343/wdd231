@@ -18,7 +18,7 @@ function show(cup) {
     return (result)
 }
 function dates() {
-    timestamp = new date()
+    timestamp = new date(timestamp)
 }
 
 console.log('timestamp')
