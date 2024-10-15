@@ -8,5 +8,15 @@ console.log(everything)
 let formData = everything[1].split('&')
 console.log(formData)
 
+function show(end) {
+    console.log(end)
+    formData.forEach(element) => {
+        console.log(element)
+        if (element.startsWith(end)) {
+            result = element
+        }
+    }
+    return (result)
+}
 const showInfo = document.querySelector('#info')
-showInfo.innerHTML = formData[0] + formData[1]
+showInfo.innerHTML = show("phone")
