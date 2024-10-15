@@ -18,7 +18,8 @@ function show(cup) {
     return (result)
 }
 function dates() {
-    timestamp = new date(timestamp)
+    const results = formData.timestamp
+    console.log(results)
 }
 
 console.log('timestamp')
