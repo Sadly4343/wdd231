@@ -147,13 +147,11 @@ form div {
 
 @keyframes slidein {
     from {
-        translate: 150vw 0;
-        scale: 200% 1;
+        transform: translate3d(200%, 50%, 700px) scale(4)
     }
 
     to {
-        translate: 0 0;
-        scale: 100% 1;
+        transform: translateZ(200px) scale(1);
     }
 }
 
