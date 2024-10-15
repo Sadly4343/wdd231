@@ -138,11 +138,8 @@ form div {
     width: 100%;
     height: fit-content;
     margin: 0 auto;
-    animation-duration: 1.5;
+    animation-duration: 2.25;
     animation-name: movein;
-
-
-
 }
 
 @keyframes movein {
