@@ -12,7 +12,8 @@ const hambutton = document.querySelector('#menu')
 
 
 function getDate() {
-    timestamp = new Date().toISOString;
+    const timestampInput = getElementById('timestamp');
+    const timestamp = new Date().toISOString;
     timestampInput.value = encodeURIComponent(timestamp);
 
 }
