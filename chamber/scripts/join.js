@@ -14,7 +14,7 @@ const hambutton = document.querySelector('#menu')
 function getDate() {
     const time = document.getElementById('timestamp');
     const timestamp = new Date();
-    time.value = timestamp.toISOString
+    time.value = timestamp.toISOString();
 }
 
 document.querySelector('form').addEventListener('submit', getDate);
