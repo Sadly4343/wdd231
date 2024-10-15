@@ -17,6 +17,11 @@ function show(cup) {
     })
     return (result)
 }
+function dates() {
+    timestamp = new date()
+}
+
+console.log('timestamp')
 const showInfo = document.querySelector('#info')
 showInfo.innerHTML = `
 <p>Membership Details For ${show('fname')} ${show('lname')}</p>
