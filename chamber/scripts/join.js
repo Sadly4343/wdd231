@@ -12,10 +12,12 @@ const hambutton = document.querySelector('#menu')
 
 
 function getDate() {
-    const date1 = new Date();
-    const month = date1.toLocaleString();
-    document.getElementById("timestamp").innerHTML = month;
+    const time = document.getElementById('timestamp');
+    const timestamp = new Date().toLocaleString();
+    time.value = timestamp;
 }
+
+document.querySelector('form').addEventListener('submit', getDate);
 
 
 hambutton.addEventListener('click', () => {
