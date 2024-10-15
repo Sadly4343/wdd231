@@ -1,23 +1,25 @@
 
 const currentUrl = window.location.href;
-console.log(currentUrl)
+
 
 const everything = currentUrl.split('?')
-console.log(everything)
+
 
 let formData = everything[1].split('&')
-console.log(formData)
 
 function show(cup) {
     console.log(cup)
     formData.forEach((element) => {
-        console.log(element)
-        if (element.startsWith(end)) {
-            result = element
+        if (element.startsWith(cup)) {
+            result = element.split('=')[1].replace("%40", "@")
         }
     })
     return (result)
 }
 const showInfo = document.querySelector('#info')
-showInfo.innerHTML = show("first")
-
+showInfo.innerHTML = `
+<p>Membership Details For ${show('fname')} ${show('lname')}</p>
+<p>Confirmation Email ${show('email')}</p>
+<p>Phone Number used ${show('phone')}</p>
+<p>Organization title ${show('organtitle')}
+<p>Organization name ${show('organ')}`

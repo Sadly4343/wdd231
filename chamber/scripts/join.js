@@ -11,6 +11,13 @@ const mainnav = document.querySelector('.navigation')
 const hambutton = document.querySelector('#menu')
 
 
+function getDate() {
+    const date1 = new Date();
+    const month = date1.toLocaleString();
+    innerHTML.month = document.getElementById('timestamp');
+}
+
+
 hambutton.addEventListener('click', () => {
     mainnav.classList.toggle('show');
     hambutton.classList.toggle('show');
