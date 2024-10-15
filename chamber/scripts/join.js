@@ -14,7 +14,7 @@ const hambutton = document.querySelector('#menu')
 function getDate() {
     const time = document.getElementById('timestamp');
     const timestamp = new Date();
-    time.value = timestamp.getTime();
+    time.value = timestamp.toLocaleDateString();
 }
 
 document.querySelector('form').addEventListener('submit', getDate);
