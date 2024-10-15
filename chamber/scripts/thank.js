@@ -9,7 +9,7 @@ let formData = everything[1].split('&')
 console.log(formData)
 function dates() {
     const results = formData[8]
-    resultss = decodeURIComponent(results).split('=')[1].replace('+', ' ');
+    resultss = decodeURIComponent(results).split('=')[1].replaceAll('+', ' ');
 
     return (resultss);
 }
