@@ -371,6 +371,18 @@ button#grid {
         margin: 0 auto;
     }
 
+    nav {
+        align-items: left;
+    }
+
+    ul.navigation.show {
+        padding: 0px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+    }
 
     .hero {
         width: auto;
