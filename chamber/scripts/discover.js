@@ -19,7 +19,7 @@ async function getCompanyData() {
     const response = await fetch(url);
     const data = await response.json();
     //console.table(data.companies); // temporary testing of data response
-    displayCompanies(data.companies);
+    displayCompanies(data.images);
 }
 
 getCompanyData();
