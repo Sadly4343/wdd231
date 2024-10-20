@@ -28,16 +28,17 @@ const displayCompanies = (images) => {
     images.forEach((image) => {
         // Create elements to add to the div.cards element
         let card = document.createElement('figure');
-        let fullName = document.createElement('figcaption')
+        let fullName = document.createElement('figcaption');
+        let imageURL = document.createElement("img");
 
         fullName.textContent = image.name;
-        image.setAttribute('src', image.url);
-        image.setAttribute('alt', `images of ${image.name} totally`); // fill in the blank
-        image.setAttribute('loading', 'lazy');
+        imageURL.setAttribute('src', image.url);
+        imageURL.setAttribute('alt', `images of ${image.name} totally`); // fill in the blank
+        imageURL.setAttribute('loading', 'lazy');
 
         // Append the section(card) with the created elements
         card.appendChild(fullName); //fill in the blank
-        card.appendChild(image);
+        card.appendChild(imageURL);
 
         cardss.appendChild(card);
     }); // end of arrow function and forEach loop
