@@ -27,7 +27,8 @@ getCompanyData();
 const displayCompanies = (images) => {
     images.forEach((image) => {
         // Create elements to add to the div.cards element
-        let card = document.createElement('section');
+        let card = document.createElement('figure');
+        let fullName = document.createElement('figcaption')
 
         fullName.textContent = image.name;
         image.setAttribute('src', image.url);
