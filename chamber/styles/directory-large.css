@@ -16,6 +16,15 @@ header img {
     padding-left: 100px;
 }
 
+figure img:hover {
+    box-shadow: 0 20px 50px green;
+
+}
+
+div#cardss {
+    border-style: solid;
+}
+
 .wrapper {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -250,6 +259,43 @@ button#grid {
     body {
         display: flex;
         flex-direction: column;
+    }
+
+    figure img {
+        width: 100%;
+    }
+
+    .div1 p,
+    .div2 p,
+    .div3 p {
+        justify-content: center;
+    }
+
+    div.wrapper {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        width: 500px;
+        text-align: center;
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    figure {
+        width: 100%;
+        margin: 0;
+    }
+
+    div#cardss {
+        width: 100%;
+    }
+
+    .div2 img {
+        width: 100%;
+    }
+
+    .cardss figure {
+        width: 100%;
     }
 
     .hero {
