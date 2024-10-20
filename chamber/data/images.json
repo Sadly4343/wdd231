@@ -13,16 +13,16 @@
             "name": "Community Center Front"
         },
         {
-            "url": "image4.jpg",
-            "name": "Caption for Image 4"
+            "url": "images/aurora-ocean.webp",
+            "name": "Aurora Hike Travel"
         },
         {
-            "url": "image5.jpg",
-            "name": "Caption for Image 5"
+            "url": "images/cattle-town.webp",
+            "name": "Community Cattle Farm"
         },
         {
-            "url": "image6.jpg",
-            "name": "Caption for Image 6"
+            "url": "images/aurora-cattle.webp",
+            "name": "Aurora Town Cattle"
         }
     ]
 }
