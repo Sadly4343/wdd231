@@ -386,6 +386,7 @@ button#grid {
         flex-direction: column;
         width: 100%;
         margin: 0 auto;
+        padding: 0px;
     }
 
     .middle-section {
@@ -398,7 +399,7 @@ button#grid {
         width: 100%;
         height: auto;
         align-items: center;
-        padding: 10px;
+        padding: 0px;
 
     }
 }
