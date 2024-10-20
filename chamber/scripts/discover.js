@@ -12,7 +12,7 @@ const hambutton = document.querySelector('#menu')
 
 
 
-const url = 'https://raw.githubusercontent.com/Sadly4343/wdd231/refs/heads/main/chamber/data/members.json'
+const url = 'https://raw.githubusercontent.com/Sadly4343/wdd231/refs/heads/main/chamber/data/images.json'
 const cards = document.querySelector('#cards')
 
 async function getCompanyData() {
@@ -24,34 +24,19 @@ async function getCompanyData() {
 
 getCompanyData();
 
-const displayCompanies = (companies) => {
-    companies.forEach((companie) => {
+const displayCompanies = (images) => {
+    images.forEach((image) => {
         // Create elements to add to the div.cards element
         let card = document.createElement('section');
-        let fullName = document.createElement('h8'); // fill in the blank
-        let image = document.createElement('img');
-        let address = document.createElement('p');
-        let phone = document.createElement('p');
-        let website = document.createElement('a');
 
-
-        fullName.textContent = companie.name;
-        address.textContent = companie.address;
-        phone.textContent = companie.phone;
-        website.textContent = companie.website;
-        website.setAttribute('href', companie.website)
-        image.setAttribute('src', companie.image);
-        image.setAttribute('alt', `images of ${companie.name} totally`); // fill in the blank
+        fullName.textContent = image.name;
+        image.setAttribute('src', image.url);
+        image.setAttribute('alt', `images of ${image.name} totally`); // fill in the blank
         image.setAttribute('loading', 'lazy');
-        image.setAttribute('width', '48');
-        image.setAttribute('height', '48');
 
         // Append the section(card) with the created elements
         card.appendChild(fullName); //fill in the blank
         card.appendChild(image);
-        card.appendChild(address);
-        card.appendChild(phone);
-        card.appendChild(website);
 
         cardss.appendChild(card);
     }); // end of arrow function and forEach loop

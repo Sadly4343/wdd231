@@ -1,0 +1,28 @@
+{
+    "images": [
+        {
+            "url": "images/tree.webp",
+            "name": "Borealis Trees in Winter"
+        },
+        {
+            "url": "images/town-hall.webp",
+            "name": "Aurora Borealis Town Hall"
+        },
+        {
+            "url": "images/community.webp",
+            "name": "Community Center Front"
+        },
+        {
+            "url": "image4.jpg",
+            "name": "Caption for Image 4"
+        },
+        {
+            "url": "image5.jpg",
+            "name": "Caption for Image 5"
+        },
+        {
+            "url": "image6.jpg",
+            "name": "Caption for Image 6"
+        }
+    ]
+}
