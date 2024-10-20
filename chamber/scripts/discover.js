@@ -11,6 +11,12 @@ const mainnav = document.querySelector('.navigation')
 const hambutton = document.querySelector('#menu')
 
 
+hambutton.addEventListener('click', () => {
+    mainnav.classList.toggle('show');
+    hambutton.classList.toggle('show');
+});
+
+
 
 const url = 'https://raw.githubusercontent.com/Sadly4343/wdd231/refs/heads/main/chamber/data/images.json'
 const cards = document.querySelector('#cards')
