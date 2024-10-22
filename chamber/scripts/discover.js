@@ -49,3 +49,19 @@ const displayCompanies = (images) => {
         cardss.appendChild(card);
     }); // end of arrow function and forEach loop
 }
+
+time_check();
+function time_check() {
+    const timeShow = document.getElementById('yes')
+    let timestored = localStorage.getItem('timestamp');
+
+
+    if (!timestored) {
+        timestored = Date.now();
+        localStorage.setItem('timestamp', timestored);
+        timeShow.innerHTML = "First Visit!"
+    }
+    else {
+        timeShow.innerHTML = "Not first visit!"
+    }
+}
