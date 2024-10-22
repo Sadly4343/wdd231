@@ -24,7 +24,6 @@ const cards = document.querySelector('#cards')
 async function getCompanyData() {
     const response = await fetch(url);
     const data = await response.json();
-    //console.table(data.companies); // temporary testing of data response
     displayCompanies(data.images);
 }
 
@@ -32,22 +31,22 @@ getCompanyData();
 
 const displayCompanies = (images) => {
     images.forEach((image) => {
-        // Create elements to add to the div.cards element
+
         let card = document.createElement('figure');
         let fullName = document.createElement('figcaption');
         let imageURL = document.createElement("img");
 
         fullName.textContent = image.name;
         imageURL.setAttribute('src', image.url);
-        imageURL.setAttribute('alt', `images of ${image.name} totally`); // fill in the blank
+        imageURL.setAttribute('alt', `images of ${image.name} totally`);
         imageURL.setAttribute('loading', 'lazy');
 
-        // Append the section(card) with the created elements
-        card.appendChild(fullName); //fill in the blank
+
+        card.appendChild(fullName);
         card.appendChild(imageURL);
 
         cardss.appendChild(card);
-    }); // end of arrow function and forEach loop
+    });
 }
 
 time_check();
