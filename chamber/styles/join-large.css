@@ -371,9 +371,6 @@ button#grid {
         margin: 0 auto;
     }
 
-    nav {
-        align-items: left;
-    }
 
     ul.navigation.show {
         padding: 0px;
@@ -382,6 +379,7 @@ button#grid {
     header {
         display: flex;
         flex-direction: column;
+        padding: 0px;
     }
 
     .hero {
@@ -395,6 +393,10 @@ button#grid {
         margin-right: 0px;
         width: auto;
         height: 100%;
+    }
+
+    section#memberForm {
+        margin: 0 auto;
     }
 
     #menu {
