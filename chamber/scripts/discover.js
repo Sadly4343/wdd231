@@ -52,15 +52,22 @@ const displayCompanies = (images) => {
 time_check();
 function time_check() {
     const timeShow = document.getElementById('yes')
-    let timestored = localStorage.getItem('timestamp');
-
-
-    if (!timestored) {
-        timestored = Date.now();
-        localStorage.setItem('timestamp', timestored);
+    //let timeStored = new Date(localStorage.getItem('timestamp'));
+    let timeStored = new Date(parseInt(localStorage.getItem('timestamp')));
+    if (!timeStored) {
+        let timeStored = Date.now();
+        localStorage.setItem('timestamp', timeStored);
         timeShow.innerHTML = "First Visit!"
     }
+
     else {
-        timeShow.innerHTML = "Not first visit!"
+        let currentDate = Date.now();
+        let hours = (currentDate - timeStored) / (1000 * 60 * 60);
+        if (hours < 24)
+            timeShow.innerHTML = "Not first visit!";
+        else {
+            timeShow.innerHTML = "Not third visit";
+        }
+
     }
 }
