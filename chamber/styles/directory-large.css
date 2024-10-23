@@ -22,7 +22,7 @@ figure img:hover {
 }
 
 div#cardss {
-    border-style: solid;
+    border-style: none;
 }
 
 .wrapper {
@@ -255,6 +255,11 @@ button#grid {
     display: none;
 }
 
+.div2 img {
+    width: 100%;
+    height: auto;
+}
+
 @media (max-width: 500px) {
     body {
         display: flex;
@@ -263,6 +268,27 @@ button#grid {
 
     figure img {
         width: 100%;
+    }
+
+    figure img:hover {
+        box-shadow: none;
+
+    }
+
+    div.wrapper {
+        width: 100%;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .div1,
+    .div2,
+    .div3 {
+        width: 100%;
+        height: auto;
     }
 
     .div1 p,
@@ -275,7 +301,7 @@ button#grid {
         display: flex;
         flex-direction: column;
         margin: 0;
-        width: 500px;
+        width: 100%;
         text-align: center;
         justify-content: center;
         max-width: 100%;
@@ -288,6 +314,7 @@ button#grid {
 
     div#cardss {
         width: 100%;
+        height: auto;
     }
 
     .div2 img {
@@ -371,6 +398,7 @@ button#grid {
     main {
         width: 100%;
         margin: 0px;
+        max-width: fit-content;
     }
 
     #cards {
@@ -387,6 +415,7 @@ button#grid {
         width: 100%;
         margin: 0 auto;
         padding: 0px;
+        border-style: none;
     }
 
     .middle-section {
