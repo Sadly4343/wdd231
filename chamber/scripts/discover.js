@@ -57,17 +57,23 @@ function time_check() {
     if (!timeStored) {
         let timeStored = Date.now();
         localStorage.setItem('timestamp', timeStored);
-        timeShow.innerHTML = "First Visit!"
+        timeShow.innerHTML = "Welcome! Let us know if you have any questions."
     }
 
     else {
         let currentDate = Date.now();
         let hours = (currentDate - timeStored) / (1000 * 60 * 60);
         if (hours < 24)
-            timeShow.innerHTML = "Not first visit!";
-        else {
-            timeShow.innerHTML = "Not third visit";
+            timeShow.innerHTML = "Back so soon! Awesome!";
+        else if (24 < hours < 48) {
+            timeShow.innerHTML = "You last Visited one day ago"
         }
+        else {
+            let totalHours = hours / 24;
 
+            timeShow.innerHTML = `You last visited ${totalHours}`
+        }
     }
+
 }
+
