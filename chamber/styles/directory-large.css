@@ -239,6 +239,13 @@ button#grid {
     flex-direction: column;
 }
 
+.div1,
+.div2,
+.div3 {
+    width: 100%;
+    height: auto;
+}
+
 #cards.list section {
     display: flex;
     flex-direction: row;
@@ -251,11 +258,28 @@ button#grid {
     background-color: white;
 }
 
+.div2 img {
+    width: 100%;
+    height: auto;
+}
+
 .list section img {
     display: none;
 }
 
+main {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
 .div2 img {
+    width: 100%;
+    height: auto;
+}
+
+figure img {
     width: 100%;
     height: auto;
 }
@@ -284,12 +308,6 @@ button#grid {
         flex-direction: column;
     }
 
-    .div1,
-    .div2,
-    .div3 {
-        width: 100%;
-        height: auto;
-    }
 
     .div1 p,
     .div2 p,
@@ -317,9 +335,7 @@ button#grid {
         height: auto;
     }
 
-    .div2 img {
-        width: 100%;
-    }
+
 
     .cardss figure {
         width: 100%;
