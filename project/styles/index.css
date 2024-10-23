@@ -1,0 +1,25 @@
+:root {
+    --mint-green: #B2E0b2;
+    --deep-green: #2E4A2E;
+    --light-beige: #f9e6c1;
+}
+
+body {
+    margin: 0px;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    background-color: var(--mint-green);
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--mint-green);
+}
