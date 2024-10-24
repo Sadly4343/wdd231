@@ -24,8 +24,24 @@ function displayResults(data) {
     const imgElement = data.data[0].image_url;
     document.getElementById('img').src = imgElement;
 }
+const cardContainer = document.getElementById('container')
 
+const displayPlants = data => {
+    data.forEach(item => {
+        if (item.common_name != "") {
+            const card = document.createElement('div');
+            card.classList.add('card');
 
+            card.innerHTML =
+                `
+            <h3>${item.common_name}</h3>
+            `;
+
+            cardContainer.appendChild(card);
+        }
+    });
+}
+displayPlants();
 async function searchPlantsByName() {
 
     const targetUrl = 'https://trefle.io/api/v1/plants?token=uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg&filter[common_name]=beach%20strawberry';
