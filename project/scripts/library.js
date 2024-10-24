@@ -1,12 +1,36 @@
+const currentyear = document.querySelector("#currentyear");
+const today = new Date()
+
+currentyear.innerHTML = `@ <span
+class="highlight">${today.getFullYear()}</span>`;
+
+const date = new Date(document.lastModified);
+document.getElementById("lastModified").innerHTML = date;
+
+const mainnav = document.querySelector('.navigation')
+const hambutton = document.querySelector('#menu')
+
+
+hambutton.addEventListener('click', () => {
+    mainnav.classList.toggle('show');
+    hambutton.classList.toggle('show');
+});
+
+
+
+
+
+
 
 const myKey = "uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg";
-const myURL = `https://trefle.io/api/v1/plants?token=uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg`
+const myURL = `https://trefle.io/api/v1/plants?token=uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg&page=2`
 
 const names = document.querySelector('#name');
 const image = document.querySelector('#img');
-
+let firstPage = 1;
 async function apiFetch() {
     try {
+        const myURL = `https://trefle.io/api/v1/plants?token=uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg&page=${firstPage}`
         const response = await fetch(myURL);
         if (response.ok) {
             const dataArray = await response.json();
@@ -20,13 +44,20 @@ async function apiFetch() {
         console.log(error);
     }
 }
-const cardContainer = document.getElementById('card-container');
-function plantCards(items) {
 
-    if (!Array.isArray(items)) {
-        console.error("expected an array but got:", items);
-        return;
-    }
+
+const cardContainer = document.getElementById('card-container');
+function pageForward() {
+    cardContainer.innerHTML = "";
+    firstPage += 1;
+    apiFetch();
+}
+function pageBack() {
+    cardContainer.innerHTML = "";
+    firstPage -= 1;
+    apiFetch();
+}
+function plantCards(items) {
 
     items.forEach(item => {
         let image = document.createElement('img');

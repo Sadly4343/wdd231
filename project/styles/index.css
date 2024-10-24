@@ -6,8 +6,6 @@
 
 body {
     margin: 0px;
-    font-family: "Playfair Display", serif;
-    font-style: normal;
 }
 
 
@@ -58,7 +56,7 @@ ul.navigation {
 }
 
 #card-container img {
-    width: 500px;
+    width: 400px;
     height: auto;
     margin-bottom: 10px;
     color: var(--deep-green);
@@ -66,11 +64,12 @@ ul.navigation {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     aspect-ratio: 16/10;
+    border: solid 2px black;
 
 }
 
 #card-container h3 {
-    width: 500px;
+    width: 400px;
     background-color: var(--mint-green);
     color: var(--deep-green);
     margin: 0 auto;
@@ -78,14 +77,49 @@ ul.navigation {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     box-shadow: 20px 12px 8px #2E4A2E;
+    border: solid 2px black;
+}
+
+#button {
+    align-items: center;
+    text-align: center;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    background-color: var(--mint-green);
+    color: black;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+    padding: 0;
+    box-shadow: 20px 12px 8px #2E4A2E;
+    border-radius: 5px;
+    margin: 10px;
+
+
+}
+
+p {
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #2E4A2E;
+    color: white;
 }
 
 #card-container {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     gap: 20px;
     margin: 20px;
     text-align: center;
+}
+
+footer {
+    color: black;
 }
 
 
@@ -97,6 +131,51 @@ ul.navigation li a {
 }
 
 @media (max-width: 500px) {
+    #menu {
+        display: block;
+        font-size: small;
+        font-weight: 700;
+        text-decoration: none;
+        padding: .5rem .75rem;
+        background-color: black;
+        color: white;
+        text-align: center;
+        border-radius: 25px;
+    }
+
+    ul.navigation.show {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    ul.navigation.show a {
+        text-decoration: none;
+        justify-content: center;
+        color: black;
+
+    }
+
+    ul.navigation.show a:hover {
+        color: green;
+    }
+
+    .navigation li {
+        display: none;
+    }
+
+    .show li {
+        display: block;
+    }
+
+    #menu.show::before {
+        content: "X";
+    }
+
+    #menu::before {
+        content: "☰"
+    }
+
     header {
         display: flex;
         flex-direction: column;
@@ -112,6 +191,7 @@ ul.navigation li a {
         width: 100%;
         height: auto;
         box-shadow: none;
+        border: none;
     }
 
     div#card-container {
@@ -144,6 +224,7 @@ ul.navigation li a {
         width: 100%;
         margin: 0 auto;
         box-shadow: none;
+        border: none;
     }
 
     main {
