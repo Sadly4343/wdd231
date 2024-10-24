@@ -1,6 +1,6 @@
 
 const myKey = "uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg";
-const myURL = `https://trefle.io/api/v1/plants?token=uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg&filter[common_name]=beach%20strawberry`
+const myURL = `https://trefle.io/api/v1/plants?token=uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg`
 
 const names = document.querySelector('#name');
 const image = document.querySelector('#img');
@@ -9,9 +9,10 @@ async function apiFetch() {
     try {
         const response = await fetch(myURL);
         if (response.ok) {
-            const data = await response.json();
-            displayResults(data);
-            console.log(data);
+            const dataArray = await response.json();
+            const items = dataArray.data;
+            console.log(items);
+            plantCards(items);
         } else {
             throw Error(await response.text());
         }
@@ -19,29 +20,27 @@ async function apiFetch() {
         console.log(error);
     }
 }
-function displayResults(data) {
-    names.innerHTML = `${data.data[0].common_name}`
-    const imgElement = data.data[0].image_url;
-    document.getElementById('img').src = imgElement;
-}
-const cardContainer = document.getElementById('container')
+const cardContainer = document.getElementById('card-container');
+function plantCards(items) {
 
-const displayPlants = data => {
-    data.forEach(item => {
-        if (item.common_name != "") {
-            const card = document.createElement('div');
-            card.classList.add('card');
+    if (!Array.isArray(items)) {
+        console.error("expected an array but got:", items);
+        return;
+    }
 
-            card.innerHTML =
-                `
-            <h3>${item.common_name}</h3>
-            `;
-
-            cardContainer.appendChild(card);
-        }
+    items.forEach(item => {
+        let image = document.createElement('img');
+        const card = document.createElement('div');
+        card.classList.add('card');
+        card.innerHTML = `
+        <h3>${item.common_name || 'Unknown Plant'}</h3>
+        `;
+        image.setAttribute('src', item.image_url);
+        image.setAttribute('loading', 'lazy');
+        card.appendChild(image);
+        cardContainer.appendChild(card);
     });
 }
-displayPlants();
 async function searchPlantsByName() {
 
     const targetUrl = 'https://trefle.io/api/v1/plants?token=uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg&filter[common_name]=beach%20strawberry';
