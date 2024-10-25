@@ -6,6 +6,13 @@
 
 body {
     margin: 0px;
+    font-family: 'Playfair Display';
+    font-weight: 400;
+    font-style: normal;
+}
+
+main {
+    min-height: 500px;
 }
 
 
@@ -27,10 +34,12 @@ header img {
 
 
 footer {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto;
     justify-content: space-around;
     background-color: var(--mint-green);
-    color: var(--deep-green);
+    color: black;
+    position: sticky;
 }
 
 .social-media {
@@ -68,7 +77,7 @@ ul.navigation {
 
 }
 
-#card-container h3 {
+#card-container h2 {
     width: 400px;
     background-color: var(--mint-green);
     color: var(--deep-green);
@@ -101,6 +110,13 @@ button {
 
 }
 
+.card button {
+    width: 404px;
+    margin: 0 auto;
+    border-radius: 0px;
+    border: solid 2px;
+}
+
 p {
     font-weight: bold;
 }
@@ -118,9 +134,7 @@ button:hover {
     text-align: center;
 }
 
-footer {
-    color: black;
-}
+
 
 
 
@@ -220,11 +234,20 @@ ul.navigation li a {
         text-align: center;
     }
 
-    #card-container h3 {
+    #card-container h2 {
         width: 100%;
         margin: 0 auto;
         box-shadow: none;
         border: none;
+        border-bottom: solid black;
+    }
+
+    .card button {
+        width: 100%;
+        margin: 0 auto;
+        box-shadow: none;
+        border: none;
+        border-bottom: solid black;
     }
 
     main {
@@ -240,7 +263,7 @@ ul.navigation li a {
 
     .social-media {
         gap: 0px;
-        flex-direction: column;
         margin: 0px;
+
     }
 }

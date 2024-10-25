@@ -64,11 +64,13 @@ function plantCards(items) {
         const card = document.createElement('div');
         card.classList.add('card');
         card.innerHTML = `
-        <h3>${item.common_name || 'Unknown Plant'}</h3>
-        `;
+        <h2>${item.common_name || 'Unknown Plant'}</h2>
+        <button>Select ${item.common_name}</button>`;
         image.setAttribute('src', item.image_url);
         image.setAttribute('loading', 'lazy');
+        image.setAttribute('alt', `Picture of ${item.common_name}`)
         card.appendChild(image);
+
         cardContainer.appendChild(card);
     });
 }
