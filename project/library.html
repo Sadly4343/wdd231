@@ -8,6 +8,7 @@
     <meta name="description" content="Home Page for Build Your Virtual Garden">
     <meta name="author" content="Logan Hartshorn">
     <script src="scripts/library.js" defer></script>
+    <script type="module" src="scripts/plantSearch.js"></script>
     <link rel="stylesheet" type="text/css" href="styles/index.css">
     <link rel="icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,8 +45,11 @@
         <div id="button"><button onclick="pageBack()">Back</button>
             <button onclick="pageForward()">Forward</button>
         </div>
+        <input type="text" id="search-input">
+        <button id="search-button">Search</button>
         <div id="card-container"></div>
         <dialog id="memberDetails"></dialog>
+
     </main>
     <footer>
         <section>

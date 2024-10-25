@@ -18,20 +18,21 @@ hambutton.addEventListener('click', () => {
 
 
 
-
-
-
-
 const myKey = "uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg";
-const myURL = `https://trefle.io/api/v1/plants?token=uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg&page=2`
+const pageUrl = `https://trefle.io/api/v1/plants?token=uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg&page=2`
+const plantDetailUrl = `https://trefle.io/api/v1/plants/{id}/?token=uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg`
+const plantSearchURL = `https://trefle.io/api/v1/plants/search?token=YOUR_TREFLE_TOKEN&q={name}`
 
 const names = document.querySelector('#name');
 const image = document.querySelector('#img');
+
 let firstPage = 1;
-async function apiFetch() {
+
+async function apiFetchPlants(url) {
     try {
-        const myURL = `https://trefle.io/api/v1/plants?token=uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg&page=${firstPage}`
-        const response = await fetch(myURL);
+        let items;
+        //const myURL = `https://trefle.io/api/v1/plants?token=uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg&page=${firstPage}`
+        const response = await fetch(url);
         if (response.ok) {
             const dataArray = await response.json();
             const items = dataArray.data;
@@ -43,24 +44,80 @@ async function apiFetch() {
     } catch (error) {
         console.log(error);
     }
+    //return items;
 }
 
+
+async function apiFetchPlant(url) {
+    let items = [];
+    try {
+        const response = await fetch(url);
+        if (response.ok) {
+            const dataArray = await response.json();
+            items = dataArray.data;
+            console.log(items);
+            //plantCards(items);
+        } else {
+            throw Error(await response.text());
+        }
+    } catch (error) {
+        console.log(error);
+    }
+    return items;
+}
+async function apiFetchSearch(url) {
+    let items = "";
+    try {
+        const response = await fetch(url);
+        if (response.ok) {
+            const dataArray = await response.json();
+            items = dataArray.data;
+            console.log(items);
+            //plantCards(items);
+        } else {
+            throw Error(await response.text());
+        }
+    } catch (error) {
+        console.log(error);
+    }
+    return items;
+}
+
+let plantData = []
+async function fetchDataPlants(url) {
+    plantData = await apiFetchPlant(url);
+    filterPlants(plantData);
+}
+
+function getPageUrl() {
+    return `https://trefle.io/api/v1/plants?token=uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg&page=${firstPage}`
+}
 
 const cardContainer = document.getElementById('card-container');
 function pageForward() {
     cardContainer.innerHTML = "";
     firstPage += 1;
-    apiFetch();
+    apiFetchPlants(getPageUrl());
 }
 function pageBack() {
     cardContainer.innerHTML = "";
     firstPage -= 1;
-    apiFetch();
+    apiFetchPlants(getPageUrl());
+}
+function filterPlants(query) {
+    const filterData = plantData.filter(item =>
+        item.common_name && item.common_name.toLowerCase().includes(query.toLowerCase())
+    );
+    plantCards(filterData);
 }
 
+function storeItem(item) {
+    localStorage.setItem('storedCard', JSON.stringify(item))
+}
 
-
-function plantCards(items) {
+async function plantCards(items) {
+    const cardContainer = document.getElementById('card-container');
+    cardContainer.innerHTML = '';
 
     items.forEach(item => {
         let image = document.createElement('img');
@@ -83,10 +140,26 @@ function plantCards(items) {
             <button type="submit">close</button>
         </form>
         `;
+        let url = plantDetailUrl.replace('{id}', item.id)
+        let plantItem = item.id;
+        (async () => {
+            plantItem = await apiFetchPlant(url);
+        })();
+        infoButton.addEventListener('click', function () {
+            let storedCards = JSON.parse(localStorage.getItem("storedCards")) || [];
+
+            storedCards.push(plantItem);
+
+            localStorage.setItem("storedCards", JSON.stringify(storedCards));
+        });
         card.appendChild(modal);
         cardContainer.appendChild(card);
         card.querySelector('.open-modal').addEventListener('click', () => { modal.showModal(); })
     });
 }
+document.getElementById('search-button').addEventListener('click', () => {
+    const query = document.getElementById('search-input').value;
+    filterPlants(query);
 
-apiFetch();
+});
+apiFetchPlants(getPageUrl());
