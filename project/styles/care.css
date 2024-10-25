@@ -13,6 +13,8 @@ body {
 
 main {
     min-height: 500px;
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
 
@@ -165,9 +167,13 @@ button:hover {
     gap: 0px;
     margin: 0px;
     text-align: center;
-    width: 50%;
+    width: 100%;
+
 }
 
+div#sections {
+    margin: 10px;
+}
 
 
 
