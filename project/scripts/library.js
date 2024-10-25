@@ -57,33 +57,36 @@ function pageBack() {
     firstPage -= 1;
     apiFetch();
 }
+
+
+
 function plantCards(items) {
 
     items.forEach(item => {
         let image = document.createElement('img');
+        let infoButton = document.createElement('button');
         const card = document.createElement('div');
         card.classList.add('card');
         card.innerHTML = `
-        <h2>${item.common_name || 'Unknown Plant'}</h2>
-        <button>Select ${item.common_name}</button>`;
+        <h2>${item.common_name || 'Unknown Plant'}</h2>`
+        infoButton.textContent = `Add${item.common_name}`
         image.setAttribute('src', item.image_url);
         image.setAttribute('loading', 'lazy');
-        image.setAttribute('alt', `Picture of ${item.common_name}`)
+        image.setAttribute('alt', `Picture of ${item.common_name}`);
+        infoButton.setAttribute('class', 'open-modal');
         card.appendChild(image);
-
+        card.appendChild(infoButton);
+        const modal = document.createElement('dialog');
+        modal.innerHTML = `
+        <form method="dialog">
+            <h2>${item.common_name}</h2>
+            <button type="submit">close</button>
+        </form>
+        `;
+        card.appendChild(modal);
         cardContainer.appendChild(card);
+        card.querySelector('.open-modal').addEventListener('click', () => { modal.showModal(); })
     });
-}
-async function searchPlantsByName() {
-
-    const targetUrl = 'https://trefle.io/api/v1/plants?token=uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg&filter[common_name]=beach%20strawberry';
-
-
-    const response = await fetch(targetUrl);
-    const json = await response.json();
-    //const data = JSON.parse(json.contents); // Parse the contents of the response
-    console.log(json);
 }
 
 apiFetch();
-searchPlantsByName();
