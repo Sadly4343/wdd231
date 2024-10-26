@@ -16,8 +16,8 @@
         },
         {
             "name": "Barnyard Grass",
-            "description": "Appearance: .",
-            "caretips": "Soil Tolerates a range of soil types but prefers moist, fertile soil. \n Sunlight Full sun is ideal, although it can survive in partial shade. \n Watering It is drought-tolerant but benefits from moderate watering.",
+            "description": "Appearance: The plant will usually have a smooth and hairless stem that can be green or red tint. The leaves are long and flat with a rough texture. \n Uses: Considered a weed however used for animal foliage for livestock like horses, cows, and goats.",
+            "caretips": "Management: Typically mulching and mowing are used to deal with the rapid growth rate when one singular plant will produce up to thousands of seeds. \n Additional Use: can be used for erosion control since it grows fast and can hold together loose soil.",
             "image": "images/barn-grass.webp",
             "membership": "2"
         }

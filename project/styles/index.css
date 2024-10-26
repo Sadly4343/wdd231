@@ -14,6 +14,7 @@ body {
     width: 100vw;
     height: 100vw;
     overflow-x: hidden;
+
 }
 
 main {
@@ -28,7 +29,6 @@ header {
     align-items: center;
     width: 100%;
     height: auto;
-    padding: 10px;
     background-color: var(--mint-green);
 }
 
@@ -56,7 +56,6 @@ footer {
 
 div#middle {
     width: 100%;
-    padding: 20px;
 }
 
 h1 {
@@ -230,7 +229,8 @@ dialog h3 {
 
 div#cards {
     background-color: #f9e6c1;
-    border: 20px solid var(--deep-green);
+    border: 10px solid var(--deep-green);
+    border-radius: 15px;
 }
 
 div#cards img {
@@ -367,6 +367,10 @@ ul.navigation li a {
 
     header img {
         padding-top: 10px;
+    }
+
+    div#middle {
+        padding: 0px;
     }
 
     h1 {
