@@ -116,8 +116,10 @@ button:hover {
 #middle {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    background-color: --;
-
+    width: 100%;
+    height: auto;
+    gap: 50px;
+    background-color: #f9e6c1;
 }
 
 
@@ -133,11 +135,25 @@ div.middle-section img {
     display: block;
     border-radius: 25px;
     box-shadow: 20px 12px 8px #2E4A2E;
+    height: auto;
+    width: 100%;
+
+}
+
+div.middle-section {
+    display: flex;
+    flex-direction: column;
+
+}
+
+div.middle-section button {
+    margin: 0 auto;
+    width: 50%;
+    border-radius: 25px;
+    margin-top: 10px;
 }
 
 div.middle-section p {
-    text-align: none;
-    width: 65%;
     margin: 0 auto;
     margin-top: 20px;
     padding: 20px;
@@ -236,6 +252,11 @@ ul.navigation li a {
         color: white;
         text-align: center;
         border-radius: 25px;
+    }
+
+    div#middle {
+        display: flex;
+        flex-direction: column;
     }
 
     ul.navigation.show {
