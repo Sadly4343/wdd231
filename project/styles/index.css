@@ -211,7 +211,40 @@ dialog h3 {
 #cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
 }
+
+#cards img {
+    height: auto;
+    width: 100%;
+}
+
+#cards p {
+    font-size: 15px;
+}
+
+div#cards {
+    background-color: #f9e6c1;
+    border: 20px solid var(--deep-green);
+}
+
+div#cards img {
+    border: 5px solid var(--mint-green);
+    box-shadow: 10px 12px 8px #2E4A2E;
+}
+
+
+#cards section {
+    width: 100%;
+    height: auto;
+
+}
+
+h4 {
+    text-align: center;
+}
+
+
 
 button#closeBtn {
     position: absolute;
@@ -259,9 +292,32 @@ ul.navigation li a {
         border-radius: 25px;
     }
 
+    div.middle-section p {
+        margin: 0 auto;
+        margin-top: 20px;
+        background-color: var(--mint-green);
+        border-radius: 25px;
+        box-shadow: none;
+        padding: none;
+    }
+
+    div.middle-section img {
+        box-shadow: none;
+    }
+
+
+    #cards {
+        display: flex;
+        flex-direction: column;
+    }
+
     div#middle {
         display: flex;
         flex-direction: column;
+    }
+
+    div#cards {
+        width: 100%;
     }
 
     ul.navigation.show {
@@ -345,5 +401,13 @@ ul.navigation li a {
         gap: 0px;
         margin: 0px;
 
+    }
+
+    div#cards {
+        border: none;
+    }
+
+    div#cards img {
+        border: none;
     }
 }
