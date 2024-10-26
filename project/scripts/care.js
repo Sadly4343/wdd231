@@ -34,11 +34,37 @@ function displayCards() {
             cardDiv.innerHTML = `
             <h2>${card.common_name || 'Unknown Plant'}</h2>`
             cardDiv1.innerHTML = `
-            <h2>Information</h2>`
+            <h2>Information</h2>
+            <p> The plant is a vegetable? ${card.vegetable}`
+            if (card.main_species.growth.ph_minimum !== null) {
+                cardDiv1.innerHTML += `<p> Minimum pH ${card.main_species.growth.ph_minimum}</p>`
+            }
+            if (card.main_species.growth.ph_maximum !== null) {
+                cardDiv1.innerHTML += `<p> Maximum pH ${card.main_species.growth.ph_maximum}</p>`
+            }
+            if (card.main_species.edible !== null) {
+                cardDiv1.innerHTML += `<p> Is it edible? ${card.main_species.edible}</p>`
+            }
+            if (card.main_species.growth.bloom_months !== null) {
+                cardDiv1.innerHTML += `<p> The months that it blooms is ${card.main_species.growth.bloom_months}</p>`
+            }
+            if (card.main_species.fruit_or_seed.color !== null) {
+                cardDiv1.innerHTML += `<p> The color of its fruit is ${card.main_species.fruit_or_seed.color}</p>`
+            }
+            if (card.main_species.observations !== null) {
+                cardDiv1.innerHTML += `<p> Observations about this plant ${card.main_species.observations}</p>`
+            }
+            if (card.main_species.specifications.growth_rate !== null) {
+                cardDiv1.innerHTML += `<p> Growth rate of plant ${card.main_species.specifications.growth_rate}</p>`
+            }
+            if (card.main_species.growth.light !== null) {
+                cardDiv1.innerHTML += `<p> Light requirement for plant ${card.main_species.growth.light}/10</p>`
+            }
+
+
             image.setAttribute('src', card.image_url);
             image.setAttribute('loading', 'lazy');
             image.setAttribute('alt', `Picture of ${card.common_name}`);
-
 
             cardDiv.appendChild(image);
 
