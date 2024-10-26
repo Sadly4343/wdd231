@@ -36,38 +36,25 @@ const displayCompanies = (companiesData) => {
     let cardCount = 0;
     companiesData.forEach((companie) => {
 
-        if (companie.membership != "1" && cardCount < 3) {
+        if (companie.membership != "1" && cardCount < 2) {
             cardCount += 1
 
             let card = document.createElement('section');
             let fullName = document.createElement('h8');
             let image = document.createElement('img');
-            let address = document.createElement('p');
-            let phone = document.createElement('p');
-            let website = document.createElement('a');
-            let membership = document.createElement('p');
+            let description = document.createElement('p');
 
 
             fullName.textContent = companie.name;
-            address.textContent = companie.address;
-            phone.textContent = companie.phone;
-            website.textContent = companie.website;
-            website.textContent = companie.membership
-            website.setAttribute('href', companie.website)
+            description.textContent = companie.description;
             image.setAttribute('src', companie.image);
             image.setAttribute('alt', `images of ${companie.name} totally`);
             image.setAttribute('loading', 'lazy');
-            image.setAttribute('width', '48');
-            image.setAttribute('height', '48');
 
 
+            card.appendChild(description);
             card.appendChild(fullName);
-            card.appendChild(image);
-            card.appendChild(address);
-            card.appendChild(phone);
-            card.appendChild(website);
-            card.appendChild(membership);
-
+            cards.appendChild(image);
             cards.appendChild(card);
         }
     });

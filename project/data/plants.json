@@ -1,9 +1,8 @@
 {
     "companies": [
         {
-            "name": "California Thistle.",
-            "address": "1234 Innovation Drive, Tech City, TC 56789",
-            "phone": "(123) 456-7890",
+            "name": "California Thistle",
+            "description": "Appearance: The plant has spiny leaves and small purple, pink, or white flower heads that bloom in clusters. The flowers are fragrant and attractive to pollinators like bees and butterflies.\nHeight: Typically grows between 30 cm and 1.5 meters tall.\nLeaves: The leaves are lobed and spiny, often forming a rosette at the base.",
             "image": "images/cali-thistle.webp",
             "membership": "2"
         },
@@ -27,30 +26,6 @@
             "phone": "(456) 789-0123",
             "website": "https://www.edutech.com",
             "image": "images/education.svg",
-            "membership": "2"
-        },
-        {
-            "name": "Finance Pros Ltd.",
-            "address": "3344 Money Street, Finance Town, FT 34567",
-            "phone": "(567) 890-1234",
-            "website": "https://www.financepros.com",
-            "image": "images/finance.svg",
-            "membership": "2"
-        },
-        {
-            "name": "Creative Minds Studio",
-            "address": "5566 Art Blvd, Creative City, CC 45678",
-            "phone": "(678) 901-2345",
-            "website": "https://www.creativeminds.com",
-            "image": "images/creative.svg",
-            "membership": "3"
-        },
-        {
-            "name": "Travel Experts Co.",
-            "address": "7788 Adventure Road, Travel Town, TT 56789",
-            "phone": "(789) 012-3456",
-            "website": "https://www.travelexperts.com",
-            "image": "images/travel.svg",
             "membership": "2"
         }
     ]

@@ -208,6 +208,11 @@ dialog h3 {
     padding-top: 20px;
 }
 
+#cards {
+    display: flex;
+    justify-content: space-between;
+}
+
 button#closeBtn {
     position: absolute;
     right: 3px;
