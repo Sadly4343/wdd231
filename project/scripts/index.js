@@ -43,10 +43,12 @@ const displayCompanies = (companiesData) => {
             let fullName = document.createElement('h8');
             let image = document.createElement('img');
             let description = document.createElement('p');
+            let careTips = document.createElement('p');
 
 
             fullName.textContent = companie.name;
             description.textContent = companie.description;
+            careTips.textContent = companine.caretips;
             image.setAttribute('src', companie.image);
             image.setAttribute('alt', `images of ${companie.name} totally`);
             image.setAttribute('loading', 'lazy');

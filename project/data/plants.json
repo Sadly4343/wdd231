@@ -3,6 +3,7 @@
         {
             "name": "California Thistle",
             "description": "Appearance: The plant has spiny leaves and small purple, pink, or white flower heads that bloom in clusters. The flowers are fragrant and attractive to pollinators like bees and butterflies.\nHeight: Typically grows between 30 cm and 1.5 meters tall.\nLeaves: The leaves are lobed and spiny, often forming a rosette at the base.",
+            "caretips": "Soil Tolerates a range of soil types but prefers moist, fertile soil. \n Sunlight Full sun is ideal, although it can survive in partial shade. \n Watering It is drought-tolerant but benefits from moderate watering.",
             "image": "images/cali-thistle.webp",
             "membership": "2"
         },
