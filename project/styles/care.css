@@ -96,9 +96,14 @@ div.cards {
     width: 100%;
     margin-bottom: 10px;
     border: solid;
+    margin: 0 auto;
 
 
 
+}
+
+div.cards p {
+    text-align: center;
 }
 
 div.cards h2 {
@@ -183,10 +188,10 @@ button:hover {
     grid-template-columns: repeat(2, 1fr);
     gap: 0px;
     margin: 0px;
-    text-align: center;
     width: 100%;
 
 }
+
 
 div#sections {
     margin: 25px;
@@ -218,6 +223,32 @@ ul.navigation li a {
         color: white;
         text-align: center;
         border-radius: 25px;
+    }
+
+    div.cards {
+        border: none;
+
+    }
+
+    card-container {
+        text-align: none;
+    }
+
+    div#sections {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 10px;
+        padding: 10px;
+        text-align: none;
+    }
+
+    div#sections p {
+        text-align: none;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
     }
 
     ul.navigation.show {
@@ -311,6 +342,10 @@ ul.navigation li a {
         box-shadow: none;
         border: none;
         border-bottom: solid black;
+    }
+
+    div.cards p {
+        text-align: ;
     }
 
     main {
