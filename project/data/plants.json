@@ -2,31 +2,30 @@
     "companies": [
         {
             "name": "California Thistle",
-            "description": "Appearance: The plant has spiny leaves and small purple, pink, or white flower heads that bloom in clusters. The flowers are fragrant and attractive to pollinators like bees and butterflies.\nHeight: Typically grows between 30 cm and 1.5 meters tall.\nLeaves: The leaves are lobed and spiny, often forming a rosette at the base.",
+            "description": "Appearance: The plant typically has spiny leaves and will contain purple, pink, or even white flowers that are small and can bloom in a cluster. The flowers are fragrant and attractive to pollinators like bees and butterflies.\nHeight: The size depends on the species but averages from around 12 inches to 4.9 feet tall! .\nLeaves: Leaves can be identified as having spines and lobed in apperance , which can sometimes have a rose-like apperance at the base.",
+            "caretips": "Soil: Handles a wide variety of soil but will usually prefer moist and fertile type soil. \n Sunlight: Full sun is the most beneficial but can survive living in less sunlight and more shaded sections. \n Watering: It can tolerate drought like conditions but will benefit from moderate to heavy watering.",
+            "image": "images/cali-thistle.webp",
+            "membership": "2"
+        },
+        {
+            "name": "Alphine Strawberry",
+            "description": "Appearance: The plant can have white or pink flowers that will bloom in the spring time with fruit that resembles the appearance of stawberries but much smaller only around 1/2 inch in diameter. \n Height: The plant is typically found on the ground and only reaching around 6-12 inches that spread and can be used for create ground cover in gardens! \n Harvest: This plant can be harvested as it produces fruit that can be taken in latte spring through early summer and can simply be picked!",
+            "caretips": "Soil: Enjoys well-drained and sandy loam ground with a pH around 5.5 to 7.0. \n Sunlight: Can thrive in partial or in full sun, and some shade can be tolerable. \n Watering: Heavy watering necessary but do not overwater.",
+            "image": "images/alphine-straw.webp",
+            "membership": "2"
+        },
+        {
+            "name": "California Thistle",
+            "description": "Appearance: .",
             "caretips": "Soil Tolerates a range of soil types but prefers moist, fertile soil. \n Sunlight Full sun is ideal, although it can survive in partial shade. \n Watering It is drought-tolerant but benefits from moderate watering.",
             "image": "images/cali-thistle.webp",
             "membership": "2"
         },
         {
-            "name": "Green Solutions LLC",
-            "address": "5678 Eco Lane, Green Town, GT 12345",
-            "phone": "(234) 567-8901",
-            "image": "images/green.svg",
-            "membership": "2"
-        },
-        {
-            "name": "Health First Corp.",
-            "address": "9101 Wellness Blvd, Health City, HC 67890",
-            "phone": "(345) 678-9012",
-            "image": "images/health.svg",
-            "membership": "3"
-        },
-        {
-            "name": "EduTech Enterprises",
-            "address": "1122 Learning Ave, Edu City, EC 23456",
-            "phone": "(456) 789-0123",
-            "website": "https://www.edutech.com",
-            "image": "images/education.svg",
+            "name": "California Thistle",
+            "description": "Appearance: The plant has spiny leaves and small purple, pink, or white flower heads that bloom in clusters. The flowers are fragrant and attractive to pollinators like bees and butterflies.\nHeight: Typically grows between 30 cm and 1.5 meters tall.\nLeaves: The leaves are lobed and spiny, often forming a rosette at the base.",
+            "caretips": "Soil Tolerates a range of soil types but prefers moist, fertile soil. \n Sunlight Full sun is ideal, although it can survive in partial shade. \n Watering It is drought-tolerant but benefits from moderate watering.",
+            "image": "images/cali-thistle.webp",
             "membership": "2"
         }
     ]

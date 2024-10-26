@@ -48,14 +48,15 @@ const displayCompanies = (companiesData) => {
 
             fullName.textContent = companie.name;
             description.textContent = companie.description;
-            careTips.textContent = companine.caretips;
+            careTips.textContent = companie.caretips;
             image.setAttribute('src', companie.image);
             image.setAttribute('alt', `images of ${companie.name} totally`);
             image.setAttribute('loading', 'lazy');
 
 
-            card.appendChild(description);
             card.appendChild(fullName);
+            card.appendChild(description);
+            card.appendChild(careTips);
             cards.appendChild(image);
             cards.appendChild(card);
         }
