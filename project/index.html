@@ -41,12 +41,66 @@
         </nav>
     </header>
     <main>
+        <div id="hero-container">
+            <picture>
+                <source srcset="images/hero-larger.webp" media="(min-width:500px)" loading="lazy">
+                <img src="images/hero-small.webp" alt="Aurora Chamber City" width="500" height="282">
+            </picture>
+            <div id="call">
+                <button id="call-action">Sign Up Now!</button>
+            </div>
+        </div>
+        <div id="middle">
+            <div class="middle-section">
+                <img src="images/plant-advice.webp" loading="lazy">
+                <p>We have all the gardening and plant information you need! Simply navigate to the Plant Library and
+                    select a plant to learn more about your Plants! We have the widest variety and finding what you need
+                    to keep your plants happy and healthy is our goal here!</p>
+            </div>
+            <div class="middle-section">
+                <img src="images/plant-guide.webp" loading="lazy">
+                <p>We have a vast array of plants available to search throuhg our library is constantly being updated.
+                    Look
+                    here for hundreds of thousands of plants to search through! You will not be dissapointed in the wide
+                    selection of plants we offer!</p>
+            </div>
+            <div class="middle-section"> <img src="images/plant-library.webp" loading="lazy">
+                <p>We have a variety of Plant Guide Instructions that offer the best ways to improve your plant care and
+                    select through a variety of options! If you have general questions about anything this will be your
+                    place to find valuable information!</p>
+            </div>
+        </div>
 
-        <img id="img" src="images/hero-larger.webp" loading="lazy">
-        <div id="image-container"></div>
-        <img src="images/plant-advice.webp" loading="lazy">
-        <img src="images/plant-guide.webp" loading="lazy">
-        <img src="images/plant-library.webp" loading="lazy">
+        <dialog id="memberForm" class="memberForm">
+            <button type="button" id="closeBtn">❌</button>
+            <h3>Choose a Membership!</h3>
+            <form onsubmit="getDate()" action="thank.html" method="get" class="form" autocomplete="on">
+                <label for="fname">First Name*</label>
+                <div class="username">
+                    <input type="text" id="fname" name="fname" required autocomplete="on" title="Your first name below">
+                </div>
+                <label for="lname">Last Name*</label>
+                <div class="username">
+                    <input type="text" id="lname" name="lname" required autocomplete="on" title="Your last name below">
+                </div>
+                <label for="email">Email Address*</label>
+                <div class="email">
+                    <input type="email" id="email" name="email" required autocomplete="on" title="email address below"
+                        placeholder="JohnDoe@gmail.com">
+                </div>
+                <label for="phone_number">Phone Number*</label>
+                <div class="phone_number">
+                    <input type="tel" id="phone_number" name="phone_number" required autocomplete="on"
+                        title="Input phone number below">
+                </div>
+                <input type="hidden" id="timestamp" name="timestamp">
+                <div class="complete-membership">
+                    <input type="submit" id="submit" value="Complete Membership!">
+                </div>
+
+
+            </form>
+        </dialog>
 
     </main>
     <footer>

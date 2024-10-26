@@ -7,9 +7,8 @@
     <title>Build Your Virtual Garden Home Page</title>
     <meta name="description" content="Home Page for Build Your Virtual Garden">
     <meta name="author" content="Logan Hartshorn">
-    <script src="scripts/library.js" defer></script>
-    <script type="module" src="scripts/plantSearch.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles/library.css">
+    <script src="scripts/thank.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
     <link rel="icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,11 +24,11 @@
 
 <body>
     <header>
-        <img src="images/garden-logo.webp" alt="Build Your Virtual Garden Header Image">
+        <img src="images/garden-logo.webp" alt="Aurora Chamber of Commerce Picture">
         <div class="title">
             <h1>Build your Virtual Garden</h1>
         </div>
-        <a id="menu" href="#" aria-label="Menu"></a>
+        <a id="menu" href="#"></a>
         <nav>
             <ul class="navigation">
                 <li><a href="index.html">Home
@@ -42,13 +41,7 @@
         </nav>
     </header>
     <main>
-        <div id="button"><button onclick="pageBack()">Back</button>
-            <button onclick="pageForward()">Forward</button>
-        </div>
-        <input type="text" id="search-input">
-        <button id="search-button">Search</button>
-        <div id="card-container"></div>
-        <dialog id="memberDetails"></dialog>
+        <div id="info"></div>
 
     </main>
     <footer>
