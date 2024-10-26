@@ -303,7 +303,7 @@ ul.navigation li a {
         background-color: var(--mint-green);
         border-radius: 25px;
         box-shadow: none;
-        padding: none;
+        padding: 0px;
     }
 
     div.middle-section img {
