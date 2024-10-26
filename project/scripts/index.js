@@ -40,7 +40,7 @@ const displayCompanies = (companiesData) => {
             cardCount += 1
 
             let card = document.createElement('section');
-            let fullName = document.createElement('h4');
+            let fullName = document.createElement('h2');
             let image = document.createElement('img');
             let description = document.createElement('p');
             let careTips = document.createElement('p');
