@@ -71,7 +71,6 @@ h1 {
 ul.navigation {
     display: flex;
     justify-content: space-around;
-    padding: 20px;
     width: 100%;
 
     font-size: 30px;
@@ -133,8 +132,6 @@ button:hover {
     width: 100%;
     height: auto;
     background-color: #f9e6c1;
-    min-height: 500px;
-    min-width: 500px;
 }
 
 div.middle-section {
@@ -325,12 +322,16 @@ ul.navigation li a {
         border-radius: 25px;
     }
 
-    p {
+    nav a {
         width: 100%;
     }
 
-    div.middle-section {
-        min-height: 500px;
+    nav {
+        width: 100%;
+    }
+
+    p {
+        width: 100%;
     }
 
     div.middle-section p {
@@ -372,10 +373,16 @@ ul.navigation li a {
         width: 100%;
     }
 
+    ul.navigation {
+        width: 100%;
+    }
+
     ul.navigation.show {
         text-align: center;
         display: flex;
         flex-direction: column;
+        width: 100%;
+
     }
 
     ul.navigation.show a {

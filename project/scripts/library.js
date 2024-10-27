@@ -126,7 +126,7 @@ async function plantCards(items) {
         card.classList.add('card');
         card.innerHTML = `
         <h2>${item.common_name || 'Unknown Plant'}</h2>`
-        infoButton.textContent = `Add${item.common_name}`
+        infoButton.textContent = `Add ${item.common_name}`
         image.setAttribute('src', item.image_url);
         image.setAttribute('loading', 'lazy');
         image.setAttribute('alt', `Picture of ${item.common_name}`);

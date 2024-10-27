@@ -2,22 +2,22 @@
     "companies": [
         {
             "name": "California Thistle",
-            "description": "Appearance: The plant typically has spiny leaves and will contain purple, pink, or even white flowers that are small and can bloom in a cluster. The flowers are fragrant and attractive to pollinators like bees and butterflies.\nHeight: The size depends on the species but averages from around 12 inches to 4.9 feet tall! .\nLeaves: Leaves can be identified as having spines and lobed in apperance , which can sometimes have a rose-like apperance at the base.",
-            "caretips": "Soil: Handles a wide variety of soil but will usually prefer moist and fertile type soil. \n Sunlight: Full sun is the most beneficial but can survive living in less sunlight and more shaded sections. \n Watering: It can tolerate drought like conditions but will benefit from moderate to heavy watering.",
+            "description": "Appearance: The plant typically has spiny leaves and will contain purple, pink, or even white flowers that are small and can bloom in a cluster. The flowers are fragrant and attractive to pollinators like bees and butterflies.\nHeight: The size depends on the species but averages from around 12 inches to 4.9 feet tall.\nLeaves: Leaves can be identified as having spines and lobed in appearance, which can sometimes have a rose-like appearance at the base.",
+            "caretips": "Soil: Handles a wide variety of soil but will usually prefer moist and fertile type soil.\nSunlight: Full sun is the most beneficial but can survive living in less sunlight and more shaded sections.\nWatering: It can tolerate drought-like conditions but will benefit from moderate to heavy watering.",
             "image": "images/cali-thistle.webp",
             "membership": "2"
         },
         {
-            "name": "Alphine Strawberry",
-            "description": "Appearance: The plant can have white or pink flowers that will bloom in the spring time with fruit that resembles the appearance of stawberries but much smaller only around 1/2 inch in diameter. \n Height: The plant is typically found on the ground and only reaching around 6-12 inches that spread and can be used for create ground cover in gardens! \n Harvest: This plant can be harvested as it produces fruit that can be taken in latte spring through early summer and can simply be picked!",
-            "caretips": "Soil: Enjoys well-drained and sandy loam ground with a pH around 5.5 to 7.0. \n Sunlight: Can thrive in partial or in full sun, and some shade can be tolerable. \n Watering: Heavy watering necessary but do not overwater.",
+            "name": "Alpine Strawberry",
+            "description": "Appearance: The plant can have white or pink flowers that will bloom in the springtime with fruit that resembles the appearance of strawberries but much smaller, only around 1/2 inch in diameter.\nHeight: The plant is typically found on the ground and only reaches around 6-12 inches, spreading and can be used to create ground cover in gardens.\nHarvest: This plant can be harvested as it produces fruit that can be taken in late spring through early summer and can simply be picked.",
+            "caretips": "Soil: Enjoys well-drained and sandy loam ground with a pH around 5.5 to 7.0.\nSunlight: Can thrive in partial or full sun, and some shade can be tolerable.\nWatering: Heavy watering is necessary but do not overwater.",
             "image": "images/alphine-straw.webp",
             "membership": "2"
         },
         {
             "name": "Barnyard Grass",
-            "description": "Appearance: The plant will usually have a smooth and hairless stem that can be green or red tint. The leaves are long and flat with a rough texture. \n Uses: Considered a weed however used for animal foliage for livestock like horses, cows, and goats.",
-            "caretips": "Management: Typically mulching and mowing are used to deal with the rapid growth rate when one singular plant will produce up to thousands of seeds. \n Additional Use: can be used for erosion control since it grows fast and can hold together loose soil.",
+            "description": "Appearance: The plant will usually have a smooth and hairless stem that can be green or have a red tint. The leaves are long and flat with a rough texture.\nUses: Considered a weed, however, used for animal forage for livestock like horses, cows, and goats.",
+            "caretips": "Management: Typically, mulching and mowing are used to deal with the rapid growth rate when one singular plant will produce up to thousands of seeds.\nAdditional Use: Can be used for erosion control since it grows fast and can hold together loose soil.",
             "image": "images/barn-grass.webp",
             "membership": "2"
         }
