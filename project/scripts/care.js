@@ -20,8 +20,6 @@ function displayCards() {
 
     if (storedCards) {
         const cardArray = JSON.parse(storedCards);
-
-        console.log(cardArray);
         const cardContainer = document.getElementById('card-container');
         cardContainer.innerHTML = '';
 

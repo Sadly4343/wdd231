@@ -11,7 +11,7 @@ body {
     font-style: normal;
     margin: 0;
     padding: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vw;
     overflow-x: hidden;
 
@@ -300,15 +300,17 @@ input#submit:hover {
     display: block;
 }
 
-
-
-
-
 ul.navigation li a {
     text-decoration: none;
     color: var(--deep-green);
 
 }
+
+a.active:target {
+    background-color: red;
+}
+
+
 
 @media (max-width: 500px) {
     #menu {
@@ -367,7 +369,6 @@ ul.navigation li a {
     div#middle {
         display: flex;
         flex-direction: column;
-        min-height: 1000px;
     }
 
     div#cards {

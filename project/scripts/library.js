@@ -36,15 +36,12 @@ async function apiFetchPlants(url) {
         if (response.ok) {
             const dataArray = await response.json();
             const items = dataArray.data;
-            console.log(items);
             plantCards(items);
         } else {
             throw Error(await response.text());
         }
     } catch (error) {
-        console.log(error);
     }
-    //return items;
 }
 
 
@@ -55,13 +52,12 @@ async function apiFetchPlant(url) {
         if (response.ok) {
             const dataArray = await response.json();
             items = dataArray.data;
-            console.log(items);
+
             //plantCards(items);
         } else {
             throw Error(await response.text());
         }
     } catch (error) {
-        console.log(error);
     }
     return items;
 }
@@ -72,13 +68,11 @@ async function apiFetchSearch(url) {
         if (response.ok) {
             const dataArray = await response.json();
             items = dataArray.data;
-            console.log(items);
-            //plantCards(items);
+
         } else {
             throw Error(await response.text());
         }
     } catch (error) {
-        console.log(error);
     }
     return items;
 }
