@@ -104,16 +104,7 @@ function pageBack() {
     firstPage -= 1;
     apiFetchPlants(getPageUrl());
 }
-function filterPlants(query) {
-    const filterData = plantData.filter(item =>
-        item.common_name && item.common_name.toLowerCase().includes(query.toLowerCase())
-    );
-    plantCards(filterData);
-}
 
-function storeItem(item) {
-    localStorage.setItem('storedCard', JSON.stringify(item))
-}
 
 async function plantCards(items) {
     const cardContainer = document.getElementById('card-container');

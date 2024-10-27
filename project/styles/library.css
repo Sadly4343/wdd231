@@ -13,6 +13,7 @@ body {
     width: 100vw;
     height: 100vw;
     overflow-x: hidden;
+    font-family: 'Playfair Display';
 
 }
 
@@ -41,7 +42,6 @@ header {
 #copy {
     height: auto;
     width: 100%;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 header img {
@@ -141,10 +141,6 @@ p {
     font-weight: bold;
 }
 
-button:hover {
-    background-color: #2E4A2E;
-    color: white;
-}
 
 #card-container {
     display: grid;
@@ -155,34 +151,10 @@ button:hover {
     min-height: 1000px;
 }
 
-#img {
-    width: 100%;
-    height: auto;
-}
 
-picture img {
-    width: 100%;
-    height: auto;
-}
 
-#call {
-    position: absolute;
-    bottom: 20px;
-    right: 200px;
-    width: 200px;
-}
 
-button#call-action {
-    width: 200px;
-}
 
-#call button {
-    width: 200px;
-}
-
-div#hero-container {
-    position: relative;
-}
 
 
 
@@ -240,9 +212,6 @@ ul.navigation li a {
 
     }
 
-    ul.navigation.show a:hover {
-        color: green;
-    }
 
     .navigation li {
         display: none;
