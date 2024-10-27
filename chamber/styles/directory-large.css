@@ -1,5 +1,6 @@
 body {
-    margin: auto;
+    margin: 0 auto;
+    width: 80%;
     font-family: 'Exo 2', sans-serif;
 }
 
@@ -29,7 +30,7 @@ div#cardss {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 20px;
-    max-width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -46,6 +47,8 @@ div#cardss {
 }
 
 div#cardss {
+    min-width: 300px;
+    min-height: 500px;
     grid-area: 1 / 2 / 4 / 3;
 }
 
@@ -90,14 +93,19 @@ h1 {
     padding: 20px;
 }
 
+section {
+    width: 100%;
+    height: fit-content;
+}
+
 footer {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
     height: auto;
     background-color: #78FF94;
-    padding: 20px;
+    padding: 0;
     border-style: solid;
 }
 
@@ -168,7 +176,7 @@ h2 {
     margin: 0 auto;
     width: 80%;
     margin-top: 25px;
-    font-size: 50px;
+    font-size: 20px;
 }
 
 .current-weather img {
@@ -244,6 +252,7 @@ button#grid {
 .div3 {
     width: 100%;
     height: auto;
+    max-width: 500px;
 }
 
 #cards.list section {
@@ -258,20 +267,20 @@ button#grid {
     background-color: white;
 }
 
-.div2 img {
-    width: 100%;
-    height: auto;
-}
-
 .list section img {
     display: none;
+}
+
+figure {
+    min-height: 200px;
+    min-width: 100px;
 }
 
 main {
     width: 100%;
     height: auto;
     margin: 0 auto;
-    max-width: 1500px;
+    min-height: 500px;
 }
 
 .div2 img {
@@ -279,8 +288,13 @@ main {
     height: auto;
 }
 
+#yes {
+    margin: 0;
+    min-height: 50px;
+}
+
 figure img {
-    width: 100%;
+    width: 400px;
     height: auto;
 }
 
@@ -333,6 +347,10 @@ figure img {
     div#cardss {
         width: 100%;
         height: auto;
+    }
+
+    section {
+        padding: 0;
     }
 
 
@@ -395,6 +413,10 @@ figure img {
         content: "X";
     }
 
+    h1 {
+        width: 100%;
+    }
+
 
 
 
@@ -413,8 +435,7 @@ figure img {
 
     main {
         width: 100%;
-        margin: 0px;
-        max-width: fit-content;
+        margin: 0 auto;
     }
 
     #cards {
