@@ -37,18 +37,27 @@ strong {
 
 
 header {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     height: auto;
-    padding: 10px;
+    padding: 0px;
     background-color: var(--mint-green);
 }
 
 header img {
     box-shadow: 5px 12px 8px #2E4A2E;
     border-radius: 25px;
+}
+
+.title {
+    width: 100%;
+    height: auto;
+    min-height: 0px;
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+
 }
 
 
@@ -59,6 +68,17 @@ footer {
     background-color: var(--mint-green);
     color: black;
     position: sticky;
+    min-height: 200px;
+}
+
+footer section {
+    min-height: 200px;
+}
+
+.copy {
+    min-height: 200px;
+    min-width: 100px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .social-media {
@@ -78,14 +98,15 @@ ul.navigation {
     display: flex;
     justify-content: space-evenly;
     gap: 60px;
-    font-size: 30px;
+
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
     list-style-type: none;
     text-decoration: none;
+    padding-left: 10px;
 }
 
 div.card h2 {
     width: 800px;
-    border-radius: none;
 }
 
 div.cards {
@@ -95,7 +116,7 @@ div.cards {
     height: 400px;
     width: 100%;
     margin-bottom: 10px;
-    border: solid;
+
     margin: 0 auto;
 
 
@@ -192,15 +213,30 @@ button:hover {
 
 }
 
+nav {
+    width: 100%;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+}
+
 
 div#sections {
-    margin: 25px;
+
     box-shadow: 20px 12px 8px #2E4A2E;
     border-radius: 15px;
     background-color: #B2E0b2;
     padding: 10px;
     border: 5px black;
-    height: fit-content
+    height: fit-content;
+    min-height: 800px;
+    min-width: 200px;
+}
+
+div {
+    min-height: 200px;
 }
 
 
@@ -230,20 +266,11 @@ ul.navigation li a {
 
     }
 
-    card-container {
-        text-align: none;
-    }
-
     div#sections {
         margin: 0;
-        padding: 0;
         margin-bottom: 10px;
         padding: 10px;
-        text-align: none;
-    }
-
-    div#sections p {
-        text-align: none;
+        min-height: 800px;
     }
 
     main {

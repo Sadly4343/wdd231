@@ -157,9 +157,5 @@ async function plantCards(items) {
         card.querySelector('.open-modal').addEventListener('click', () => { modal.showModal(); })
     });
 }
-document.getElementById('search-button').addEventListener('click', () => {
-    const query = document.getElementById('search-input').value;
-    filterPlants(query);
 
-});
 apiFetchPlants(getPageUrl());

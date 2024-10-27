@@ -18,7 +18,7 @@ body {
 }
 
 main {
-    min-height: 500px;
+    min-height: 1000px;
 }
 
 
@@ -41,6 +41,7 @@ header img {
 footer {
     display: grid;
     grid-template-columns: auto auto auto;
+
     justify-content: space-around;
     background-color: var(--mint-green);
     color: black;
@@ -56,6 +57,9 @@ footer {
 
 div#middle {
     width: 100%;
+    box-sizing: border-box;
+    min-height: 200px;
+    height: auto;
 }
 
 h1 {
@@ -66,8 +70,10 @@ h1 {
 
 ul.navigation {
     display: flex;
-    justify-content: space-evenly;
-    gap: 60px;
+    justify-content: space-around;
+    padding: 20px;
+    width: 100%;
+
     font-size: 30px;
     list-style-type: none;
     text-decoration: none;
@@ -120,10 +126,24 @@ button:hover {
 #middle {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    gap: 100px;
+    padding: 20px;
+    margin: 0;
     width: 100%;
     height: auto;
-    gap: 50px;
     background-color: #f9e6c1;
+    min-height: 500px;
+    min-width: 500px;
+}
+
+div.middle-section {
+    min-height: 200px;
+}
+
+#middle img {
+    height: auto;
+    width: 100%;
 }
 
 
@@ -276,6 +296,14 @@ input#submit:hover {
     color: black;
 }
 
+#hero-picture {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
 
 
 ul.navigation li a {
@@ -297,16 +325,35 @@ ul.navigation li a {
         border-radius: 25px;
     }
 
+    p {
+        width: 100%;
+    }
+
+    div.middle-section {
+        min-height: 500px;
+    }
+
     div.middle-section p {
         margin: 0 auto;
         margin-top: 20px;
         background-color: var(--mint-green);
         border-radius: 25px;
         box-shadow: none;
+        padding: 0px;
+    }
+
+    div#middle {
+        width: 100%;
+        height: auto;
     }
 
     div.middle-section img {
         box-shadow: none;
+    }
+
+    div.middle-section button {
+        width: 100%;
+        margin: 0;
     }
 
 
@@ -318,6 +365,7 @@ ul.navigation li a {
     div#middle {
         display: flex;
         flex-direction: column;
+        min-height: 1000px;
     }
 
     div#cards {
@@ -410,6 +458,7 @@ ul.navigation li a {
         margin: 0px;
 
     }
+
 
     div#cards {
         border: none;
