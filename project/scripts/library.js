@@ -22,6 +22,7 @@ const myKey = "uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg";
 const pageUrl = `https://trefle.io/api/v1/plants?token=uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg&page=1`
 const plantDetailUrl = `https://trefle.io/api/v1/plants/{id}/?token=uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg`
 const plantSearchURL = `https://trefle.io/api/v1/plants/search?token=YOUR_TREFLE_TOKEN&q={name}`
+const proxyUrl = "https://proxy.cors.sh/";
 
 const names = document.querySelector('#name');
 const image = document.querySelector('#img');
@@ -30,7 +31,6 @@ let firstPage = 1;
 
 async function apiFetchPlants(url) {
     try {
-        let items;
         //const myURL = `https://trefle.io/api/v1/plants?token=uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg&page=${firstPage}`
         const response = await fetch(url);
         if (response.ok) {
@@ -61,33 +61,11 @@ async function apiFetchPlant(url) {
     }
     return items;
 }
-async function apiFetchSearch(url) {
-    let items = "";
-    try {
-        const response = await fetch(url);
-        if (response.ok) {
-            const dataArray = await response.json();
-            items = dataArray.data;
 
-        } else {
-            throw Error(await response.text());
-        }
-    } catch (error) {
-    }
-    return items;
-}
 
-let plantData = []
-async function fetchDataPlants(url) {
-    plantData = await apiFetchPlant(url);
-    filterPlants(plantData);
-}
-
-function getPageUrl() {
-    return `https://trefle.io/api/v1/plants?token=uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg&page=${firstPage}`
-}
 
 const cardContainer = document.getElementById('card-container');
+
 function pageForward() {
     cardContainer.innerHTML = "";
     firstPage += 1;
@@ -97,6 +75,9 @@ function pageBack() {
     cardContainer.innerHTML = "";
     firstPage -= 1;
     apiFetchPlants(getPageUrl());
+}
+function getPageUrl() {
+    return `${proxyUrl}https://trefle.io/api/v1/plants?token=uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg&page=${firstPage}`
 }
 
 
