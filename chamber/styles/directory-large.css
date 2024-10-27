@@ -302,6 +302,13 @@ figure img {
     body {
         display: flex;
         flex-direction: column;
+        width: 100%;
+    }
+
+    .div1,
+    .div2,
+    .div3 {
+        max-width: none;
     }
 
     figure img {
