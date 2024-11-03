@@ -26,7 +26,7 @@ let firstPage = 1;
 
 async function apiFetchPlants(url) {
     try {
-        //const myURL = `https://trefle.io/api/v1/plants?token=uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg&page=${firstPage}`
+        //
         const response = await fetch(url);
         if (response.ok) {
             const dataArray = await response.json();
