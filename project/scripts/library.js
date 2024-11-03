@@ -18,10 +18,6 @@ hambutton.addEventListener('click', () => {
 
 
 
-const myKey = "uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg";
-const pageUrl = `https://trefle.io/api/v1/plants?token=uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg&page=1`
-const plantDetailUrl = `https://trefle.io/api/v1/plants/{id}/?token=uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg`
-const plantSearchURL = `https://trefle.io/api/v1/plants/search?token=YOUR_TREFLE_TOKEN&q={name}`
 
 const names = document.querySelector('#name');
 const image = document.querySelector('#img');
@@ -76,7 +72,7 @@ function pageBack() {
     apiFetchPlants(getPageUrl());
 }
 function getPageUrl() {
-    return `https://trefle.io/api/v1/plants?token=uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg&page=${firstPage}`
+
 }
 
 
