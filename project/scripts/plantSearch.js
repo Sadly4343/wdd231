@@ -1,5 +1,4 @@
-function getPageUrl() {
-    return `https://trefle.io/api/v1/plants?token=uPa9xse-P3R35sGhnwy-H0MQr0J6IJQHIyO2ZG7OZeg&page=${firstPage}`
+
 }
 
 async function apiFetchPlant(url) {
