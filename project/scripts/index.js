@@ -8,7 +8,7 @@ function getDate() {
 
 
 }
-const urls = 'https://raw.githubusercontent.com/Sadly4343/wdd231/refs/heads/main/project/data/plants.json'
+
 const cards = document.querySelector('#cards')
 companiesData = [];
 async function getCompanyData() {
